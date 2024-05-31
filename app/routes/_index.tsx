@@ -37,6 +37,8 @@ export default function Index() {
       <div className="pt-6 pt-32 sm:pt-32">
         <ImageInfiniteCarousel images={images} />
       </div>
+
+      <div className="h-[500px]" />
     </>
   );
 }
