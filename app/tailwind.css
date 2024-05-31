@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+.year {
+  background-image: linear-gradient(106.94deg, #15c064 28.5%, #00d1ff 91.82%);
+  background-clip: text;
+  color: transparent;
+}
