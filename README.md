@@ -46,3 +46,11 @@ npm run deploy
 ```
 
 [bindings]: https://developers.cloudflare.com/pages/functions/bindings/
+
+## Database
+
+Create the table in local:
+
+```sh
+wrangler d1 execute hacktoberfest-2024 --local --command "CREATE TABLE IF NOT EXISTS open-source-projects ( id INTEGER PRIMARY KEY, name TEXT, description TEXT, website TEXT, created_at INTEGER);"
+```

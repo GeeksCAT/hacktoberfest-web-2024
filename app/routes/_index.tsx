@@ -1,6 +1,7 @@
-import type { MetaFunction } from "@remix-run/cloudflare";
+import { json, type LoaderFunction, type MetaFunction } from "@remix-run/cloudflare";
 import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
+import { useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,6 +11,13 @@ export const meta: MetaFunction = () => {
       content: "OpenSource Girona 2024",
     },
   ];
+};
+
+export const loader: LoaderFunction = async ({ context }) => {
+  const env = context.cloudflare.env as Env;
+
+  const { results } = await env.DB.prepare("SELECT * FROM open_source_projects LIMIT 5").all();
+  return json(results);
 };
 
 export default function Index() {
@@ -22,6 +30,9 @@ export default function Index() {
     "/images/event_6.jpg",
     "/images/event_7.jpg",
   ];
+
+  const results = useLoaderData<typeof loader>();
+  console.log(results);
 
   return (
     <>
