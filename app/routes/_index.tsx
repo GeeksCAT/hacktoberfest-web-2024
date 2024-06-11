@@ -1,7 +1,11 @@
-import { json, type LoaderFunction, type MetaFunction } from "@remix-run/cloudflare";
+import {
+  json,
+  type LoaderFunction,
+  type MetaFunction,
+} from "@remix-run/cloudflare";
 import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
-import { useLoaderData } from "@remix-run/react";
+import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +20,9 @@ export const meta: MetaFunction = () => {
 export const loader: LoaderFunction = async ({ context }) => {
   const env = context.cloudflare.env as Env;
 
-  const { results } = await env.DB.prepare("SELECT * FROM open_source_projects LIMIT 5").all();
+  const { results } = await env.DB.prepare(
+    "SELECT * FROM open_source_projects LIMIT 5"
+  ).all();
   return json(results);
 };
 
@@ -31,8 +37,7 @@ export default function Index() {
     "/images/event_7.jpg",
   ];
 
-  const results = useLoaderData<typeof loader>();
-  console.log(results);
+  const openSourceProjects = useLoaderData<typeof loader>();
 
   return (
     <>
@@ -82,6 +87,28 @@ export default function Index() {
           </div>
         </div>
 
+        <h1 className="text-3xl font-bold">Vols fer visible alguna eina/app/blibioteca open source per compartir-la amb la comunitat?</h1>
+        <div className="mt-4">
+          <Link
+            to="/add"
+            replace={true}
+            className="underline text-purple-600 hover:text-purple-700"
+          >
+            Afegeix-la aquí
+          </Link>
+          <div>
+            {
+              openSourceProjects.map((project) => (
+                <div key={project.id}>
+                  <h2>{project.name}</h2>
+                  <p>{project.description}</p>
+                  <a href={project.website}>{project.website}</a>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
         <div className="flex flex-col items-center justify-center relative mb-20 w-full">
           <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
             Agenda
@@ -110,18 +137,20 @@ export default function Index() {
           </h2>
 
           <div className="mt-10 grid max-w-max grid-cols-2 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
-            {
-              Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="flex justify-center items-center md:w-32 w-24">
-                  <img src="/logo.png" alt="sponsor" />
-                </div>
-              ))
-            }
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center md:w-32 w-24"
+              >
+                <img src="/logo.png" alt="sponsor" />
+              </div>
+            ))}
           </div>
         </div>
 
         <AboutEvent />
       </div>
+      <Outlet />
     </>
   );
 }
