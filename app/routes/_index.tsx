@@ -7,6 +7,13 @@ import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
+type SharedProject = {
+  id: number;
+  name: string;
+  description: string;
+  website: string;
+};
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Hacktoberfest" },
@@ -37,7 +44,7 @@ export default function Index() {
     "/images/event_7.jpg",
   ];
 
-  const openSourceProjects = useLoaderData<typeof loader>();
+  const openSourceProjects = useLoaderData<SharedProject[]>();
 
   return (
     <>
@@ -87,25 +94,50 @@ export default function Index() {
           </div>
         </div>
 
-        <h1 className="text-3xl font-bold">Vols fer visible alguna eina/app/blibioteca open source per compartir-la amb la comunitat?</h1>
-        <div className="mt-4">
+        <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
+          Descobreix i comparteix
+        </h2>
+
+        <p className="mt-1 text-emerald-800">
+          Vols fer visible alguna eina/app/blibioteca open source per
+          compartir-la amb la comunitat?
+        </p>
+        <div className="mt-4 mb-4">
           <Link
             to="/add"
             replace={true}
-            className="underline text-purple-600 hover:text-purple-700"
+            className="bg-neutral-900 relative z-10 w-fit hover:bg-black/90 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
           >
             Afegeix-la aquí
           </Link>
-          <div>
-            {
-              openSourceProjects.map((project) => (
-                <div key={project.id}>
-                  <h2>{project.name}</h2>
-                  <p>{project.description}</p>
-                  <a href={project.website}>{project.website}</a>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+            {openSourceProjects.map((project) => (
+              <figure
+                className="rounded-3xl bg-white border p-4 relative overflow-hidden"
+                key={project.id}
+              >
+                <div
+                  aria-hidden="true"
+                  className="inset-0 absolute aspect-video border rounded-full -translate-y-1/2 group-hover:-translate-y-1/4 duration-300 bg-gradient-to-b from-teal-500 to-white blur-2xl opacity-25"
+                />
+                <div className="flex flex-col items-start">
+                  <h3 className="font-medium text-gray-950">{project.name}</h3>
+                  <p className="text-base text-muted mt-4">
+                    {project.description}
+                  </p>
                 </div>
-              ))
-            }
+                <div className="flex gap-3 py-4">
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-3xl text-gray-950 bg-gray-100 hover:bg-gray-200/75 active:bg-gray-100 flex gap-1.5 items-center text-sm h-8 px-3.5 justify-center"
+                  >
+                    <span>Link</span>
+                  </a>
+                </div>
+              </figure>
+            ))}
           </div>
         </div>
 

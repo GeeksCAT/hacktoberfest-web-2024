@@ -34,39 +34,39 @@ export default function Edit() {
   return (
     <AnimatePresence onExitComplete={handleExitComplete}>
       {isModalOpen && (
-        <Dialog title="My modal" onDismiss={handleDismiss}>
-          <Form className="p-4 space-y-4" method="post">
+        <Dialog onDismiss={handleDismiss}>
+          <Form className="p-4 flex flex-col gap-4" method="post">
             <label>
-              <span className="block">Name</span>
+              <span className="block">Nom</span>
               <input
                 name="name"
                 type="text"
-                className="w-full border-gray-300 rounded-md"
-                placeholder=""
+                className="relative p-2 block w-full appearance-none rounded-lg text-base/6 text-zinc-950 placeholder:text-zinc-500 sm:text-sm/6 border border-zinc-950/10"
               />
             </label>
 
             <label>
-              <span className="block">description</span>
+              <span className="block">Descripció</span>
               <textarea
                 name="description"
-                className="w-full border-gray-300 rounded-md"
-                placeholder=""
+                maxLength={150}
+                className="relative p-2 block w-full appearance-none rounded-lg text-base/6 text-zinc-950 placeholder:text-zinc-500 sm:text-sm/6 border border-zinc-950/10"
               />
             </label>
 
             <label>
-              <span className="block">Website</span>
+              <span className="block">
+                Lloc web
+              </span>
               <input
                 name="website"
-                type="text"
-                className="w-full border-gray-300 rounded-md"
-                placeholder=""
+                type="url"
+                className="relative p-2 block w-full appearance-none rounded-lg text-base/6 text-zinc-950 placeholder:text-zinc-500 sm:text-sm/6 border border-zinc-950/10"
               />
             </label>
 
             <button className="w-full bg-emerald-600 text-white rounded-md py-2">
-              Submit
+              Comparteix amb la comunitat!
             </button>
           </Form>
         </Dialog>
