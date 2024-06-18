@@ -28,7 +28,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-emerald-100">
         <Header />
         {children}
-        <ScrollRestoration />
         <Scripts />
         <Footer />
       </body>

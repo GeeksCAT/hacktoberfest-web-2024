@@ -16,7 +16,9 @@ export default defineConfig({
       },
       routes(defineRoutes) {
         return defineRoutes((route) => {
-          route("/", "routes/_index.tsx", { index: true });
+          route("/", "routes/_index.tsx", () => {
+            route("/add", "routes/projects/_add.tsx");
+          });
           route("/agenda", "routes/agenda/_index.tsx");
         });
       },
