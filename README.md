@@ -52,7 +52,7 @@ npm run deploy
 Create the table in remote:
 
 ```sh
-wrangler d1 execute 'festa-os-2024' --remote --command "CREATE TABLE IF NOT EXISTS 'open-source-projects' ( id INTEGER PRIMARY KEY, name TEXT, description TEXT, website TEXT, created_at INTEGER);"
+wrangler d1 execute 'festa-os-2024' --remote --command "CREATE TABLE IF NOT EXISTS 'open_source_projects' ( id INTEGER PRIMARY KEY, name TEXT, description TEXT, website TEXT, created_at INTEGER);"
 ```
 
 Replace `--remote` with `--local` to create local development DB
