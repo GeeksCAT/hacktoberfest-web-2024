@@ -48,7 +48,7 @@ export default function Footer() {
           </Link> */}
 
           <a
-            href="https://twitter.com/Geeks_CAT"
+            href="https://x.com/Geeks_CAT"
             target="_blank"
             rel="noreferrer"
           >
