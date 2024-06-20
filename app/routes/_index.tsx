@@ -79,48 +79,52 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mt-20 mx-auto p-10 max-w-7xl">
-          <div className="flex md:flex-row flex-col gap-5 items-center justify-center mb-10">
-            <div className="relative flex flex-col">
-              <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
-                Sobre Nosaltres
-              </h2>
-              <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-                Som un grup de persones interessades en el món de l'Open Source
-                de l'associació <span className="year font-bold">GeeksCAT</span>{" "}
-                que organitzem esdeveniments per promoure la cultura de l'Open
-                Source a Girona.
-              </p>
+        <div className="relative">
+          <div className="absolute inset-0 -z-10 h-full w-full bg-emerald-100 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]">
+            <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
+          </div>
+          <div className="mt-20 mx-auto p-10 max-w-7xl">
+            <div className="flex md:flex-row flex-col gap-5 items-center justify-center mb-10">
+              <div className="relative flex flex-col">
+                <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
+                  Sobre Nosaltres
+                </h2>
+                <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+                  Som un grup de persones interessades en el món de l'Open Source
+                  de l'associació <span className="year font-bold">GeeksCAT</span>{" "}
+                  que organitzem esdeveniments per promoure la cultura de l'Open
+                  Source a Girona.
+                </p>
+              </div>
+
+              <div className="max-w-64 md:max-w-96">
+                <img src="/logo.png" alt="Open Source Girona" />
+              </div>
             </div>
 
-            <div className="max-w-64 md:max-w-96">
-              <img src="/logo.png" alt="Open Source Girona" />
+            <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
+              Descobreix i comparteix
+            </h2>
+
+
+
+            <p className="mt-1 text-emerald-800">
+              Vols fer visible alguna eina/app/blibioteca open source per
+              compartir-la amb la comunitat?
+            </p>
+            <div className="mt-4 mb-4">
+              <Link
+                to="/add"
+                replace={true}
+                className="bg-neutral-900 relative z-10 w-fit hover:bg-black/90 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
+              >
+                Afegeix-la aquí
+              </Link>
+              <HoverEffect items={openSourceProjects}></HoverEffect>
+
             </div>
-          </div>
 
-          <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
-            Descobreix i comparteix
-          </h2>
-
-
-
-          <p className="mt-1 text-emerald-800">
-            Vols fer visible alguna eina/app/blibioteca open source per
-            compartir-la amb la comunitat?
-          </p>
-          <div className="mt-4 mb-4">
-            <Link
-              to="/add"
-              replace={true}
-              className="bg-neutral-900 relative z-10 w-fit hover:bg-black/90 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
-            >
-              Afegeix-la aquí
-            </Link>
-            <HoverEffect items={openSourceProjects}></HoverEffect>
-
-          </div>
-
-          {/* <div className="flex mb-16">
+            {/* <div className="flex mb-16">
             <div className="flex-1">
               <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">Busquem patrocinadors pel millor event Open Source de Girona</h2>
             </div>
@@ -132,7 +136,8 @@ export default function Index() {
 
 
 
-          <AboutEvent />
+            <AboutEvent />
+          </div>
         </div>
       </TracingBeam>
       <Outlet />
