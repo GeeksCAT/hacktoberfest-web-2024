@@ -67,7 +67,7 @@ const MobileMenu = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-emerald-500/10">
                 <div className="space-y-2 py-6">
-                  <Link
+                  {/* <Link
                     to="/agenda"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
                   >
@@ -78,7 +78,7 @@ const MobileMenu = () => {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
                   >
                     Ponents
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/"
                     className="-mx-3 block rounded-full bg-emerald-300 px-4 py-1.5 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-300"
@@ -106,7 +106,7 @@ export default function Header() {
           <div className="md:hidden">
             <MobileMenu />
           </div>
-          <Link
+          {/* <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
             to="/agenda"
           >
@@ -117,7 +117,7 @@ export default function Header() {
             to={""}
           >
             Ponents
-          </Link>
+          </Link> */}
           <a
             href="https://www.eventbrite.es/e/entradas-festa-opensource-girona-2023-geekscat-gdg-718595698077"
             target="_blank"

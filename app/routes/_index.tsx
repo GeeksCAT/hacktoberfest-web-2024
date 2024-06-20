@@ -145,25 +145,8 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center relative mb-20 w-full">
-            <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
-              Agenda
-            </h2>
 
-            <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-              Properament publicarem la agenda de l'esdeveniment.
-            </p>
-          </div>
 
-          <div className="flex flex-col items-center justify-center relative mb-20 w-full">
-            <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
-              Ponents
-            </h2>
-
-            <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-              Properament publicarem la llista de ponents.
-            </p>
-          </div>
 
           {/* Sponsorship */}
 

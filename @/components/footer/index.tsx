@@ -34,7 +34,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <Link
+          {/* <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900"
             to={""}
           >
@@ -45,7 +45,7 @@ export default function Footer() {
             to={""}
           >
             Ponents
-          </Link>
+          </Link> */}
 
           <a
             href="https://twitter.com/Geeks_CAT"
