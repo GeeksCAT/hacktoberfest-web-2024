@@ -14,6 +14,7 @@ type SharedProject = {
   website: string;
 };
 import { TracingBeam } from "@/components/tracing-beam";
+import { HoverEffect } from "@/components/card-hover-effect";
 // import Button from "@/components/button";
 
 export const meta: MetaFunction = () => {
@@ -30,7 +31,7 @@ export const loader: LoaderFunction = async ({ context }) => {
   const env = context.cloudflare.env as Env;
 
   const { results } = await env.DB.prepare(
-    "SELECT * FROM open_source_projects LIMIT 5"
+    "SELECT * FROM open_source_projects LIMIT 10"
   ).all();
   return json(results);
 };
@@ -101,6 +102,8 @@ export default function Index() {
             Descobreix i comparteix
           </h2>
 
+
+
           <p className="mt-1 text-emerald-800">
             Vols fer visible alguna eina/app/blibioteca open source per
             compartir-la amb la comunitat?
@@ -113,37 +116,8 @@ export default function Index() {
             >
               Afegeix-la aquí
             </Link>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-              {openSourceProjects.map((project) => (
-                <figure
-                  className="rounded-3xl bg-white border p-4 relative overflow-hidden"
-                  key={project.id}
-                >
-                  <div
-                    aria-hidden="true"
-                    className="inset-0 absolute aspect-video border rounded-full -translate-y-1/2 group-hover:-translate-y-1/4 duration-300 bg-gradient-to-b from-teal-500 to-white blur-2xl opacity-25"
-                  />
-                  <div className="flex flex-col items-start">
-                    <h3 className="font-medium text-gray-950">
-                      {project.name}
-                    </h3>
-                    <p className="text-base text-muted mt-4">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div className="flex gap-3 py-4">
-                    <a
-                      href={project.website}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-3xl text-gray-950 bg-gray-100 hover:bg-gray-200/75 active:bg-gray-100 flex gap-1.5 items-center text-sm h-8 px-3.5 justify-center"
-                    >
-                      <span>Link</span>
-                    </a>
-                  </div>
-                </figure>
-              ))}
-            </div>
+            <HoverEffect items={openSourceProjects}></HoverEffect>
+
           </div>
 
           {/* <div className="flex mb-16">
