@@ -14,6 +14,7 @@ type SharedProject = {
   website: string;
 };
 import { TracingBeam } from "@/components/tracing-beam";
+// import Button from "@/components/button";
 
 export const meta: MetaFunction = () => {
   return [
@@ -145,27 +146,17 @@ export default function Index() {
             </div>
           </div>
 
-
-
-
-          {/* Sponsorship */}
-
-          <div className="flex flex-col items-center justify-center relative mb-20 w-full">
-            <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
-              Patrocinadors
-            </h2>
-
-            <div className="mt-10 grid max-w-max grid-cols-2 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="flex justify-center items-center md:w-32 w-24"
-                >
-                  <img src="/logo.png" alt="sponsor" />
-                </div>
-              ))}
+          {/* <div className="flex mb-16">
+            <div className="flex-1">
+              <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">Busquem patrocinadors pel millor event Open Source de Girona</h2>
             </div>
-          </div>
+            <div className="flex flex-1 justify-center items-center">
+              <Button>Contacta'ns</Button>
+            </div>
+          </div> */}
+
+
+
 
           <AboutEvent />
         </div>
