@@ -3,16 +3,13 @@ import {
   type LoaderFunction,
   type MetaFunction,
 } from "@remix-run/cloudflare";
-import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
-import AboutEvent from "@/components/about-event";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
-type SharedProject = {
-  id: number;
-  name: string;
-  description: string;
-  website: string;
-};
+import { drizzle } from 'drizzle-orm/d1';
+import { OpenSourceProject, open_source_projects } from "db/schema";
+
+import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
+import AboutEvent from "@/components/about-event";
 import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
 // import Button from "@/components/button";
@@ -30,10 +27,10 @@ export const meta: MetaFunction = () => {
 export const loader: LoaderFunction = async ({ context }) => {
   const env = context.cloudflare.env as Env;
 
-  const { results } = await env.DB.prepare(
-    "SELECT * FROM open_source_projects LIMIT 10"
-  ).all();
-  return json(results);
+  const db = drizzle(env.DB);
+  const { results: latestProjects} = await db.select().from(open_source_projects).limit(10).run();
+
+  return json(latestProjects);
 };
 
 export default function Index() {
@@ -47,7 +44,7 @@ export default function Index() {
     "/images/event_7.jpg",
   ];
 
-  const openSourceProjects = useLoaderData<SharedProject[]>();
+  const openSourceProjects = useLoaderData<OpenSourceProject[]>();
 
   return (
     <div className="relative overflow-hidden py-20 md:py-0">
