@@ -57,7 +57,7 @@ export default function Index() {
             <span>Open Source</span>
             <span>Girona</span>{" "}
             <span>
-              <span className="year">21/10/2024</span>
+              <span className="year">19/10/2024</span>
             </span>
           </div>
         </div>
