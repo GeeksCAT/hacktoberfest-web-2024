@@ -15,7 +15,7 @@ export const open_source_projects = sqliteTable("open_source_projects", {
 export const users = sqliteTable("users", {
   id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
   email: text("email").unique(),
-  password: text("name").notNull(),
+  password: text("password").notNull(),
   createdAt: text("created_at")
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),

@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "1ab13ead-f703-49f5-8fec-644bde877b61",
+  "id": "bf6528ac-b2bb-4526-8543-e191959111d6",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "open_source_projects": {
@@ -74,8 +74,8 @@
           "notNull": false,
           "autoincrement": false
         },
-        "name": {
-          "name": "name",
+        "password": {
+          "name": "password",
           "type": "text",
           "primaryKey": false,
           "notNull": true,

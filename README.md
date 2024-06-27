@@ -72,3 +72,9 @@ npx wrangler d1 migrations apply 'festa-os-2024' --local
 ```
 
 Replace --local with --remote to apply the migration in the remote database.
+
+### Add user
+
+```sh
+wrangler d1 execute 'festa-os-2024' --local --command "INSERT INTO users (id, email, password ) VALUES (1, '----', '----');"
+```

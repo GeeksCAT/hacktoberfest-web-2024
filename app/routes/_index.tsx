@@ -12,6 +12,7 @@ import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
 import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
+import { hash } from "@/lib/passwordHashing.server";
 // import Button from "@/components/button";
 
 export const meta: MetaFunction = () => {
