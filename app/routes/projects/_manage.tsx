@@ -1,5 +1,10 @@
 import { authenticator } from "@/lib/auth.server";
-import { LoaderFunctionArgs, json, redirect } from "@remix-run/cloudflare";
+import {
+  ActionFunctionArgs,
+  LoaderFunctionArgs,
+  json,
+  redirect,
+} from "@remix-run/cloudflare";
 import { useLoaderData, useSubmit } from "@remix-run/react";
 import { OpenSourceProject, open_source_projects, users } from "db/schema";
 import { eq } from "drizzle-orm";
@@ -11,7 +16,6 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   const db = drizzle(env.DB);
 
   const userSession = await authenticator.isAuthenticated(request);
-  console.log("userSession", userSession);
   if (!userSession) {
     return redirect("/login");
   }
@@ -33,9 +37,23 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
     .from(open_source_projects)
     .run();
 
-  console.log("openSourceProjects", openSourceProjects);
-
   return json(openSourceProjects);
+}
+
+export async function action({ request, context }: ActionFunctionArgs) {
+  const env = context.cloudflare.env as Env;
+  const db = drizzle(env.DB);
+
+  const data = await request.formData();
+
+  await db
+    .update(open_source_projects)
+    .set({
+      visible: data.get("visible"),
+    })
+    .where(eq(open_source_projects.id, data.get("id")))
+    .run();
+  return null;
 }
 
 export default function ManageOpenSourceProjects() {
@@ -46,6 +64,13 @@ export default function ManageOpenSourceProjects() {
     submit(null, {
       method: "POST",
       action: "/action/logout",
+    });
+  };
+
+  const updateProject = (project: OpenSourceProject) => {
+    submit(project, {
+      method: "POST",
+      action: "/open-soruce-projects",
     });
   };
 
@@ -96,7 +121,16 @@ export default function ManageOpenSourceProjects() {
                   {project.website}
                 </td>
                 <td className="px-4 py-4 border-b border-b-zinc-950/10 text-right">
-                  <input type="checkbox" checked={project.visible === 1} />
+                  <input
+                    type="checkbox"
+                    checked={project.visible === 1}
+                    onChange={(e) => {
+                      updateProject({
+                        ...project,
+                        visible: e.target.checked ? 1 : 0,
+                      });
+                    }}
+                  />
                 </td>
               </tr>
             ))}

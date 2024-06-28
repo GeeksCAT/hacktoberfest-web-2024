@@ -5,6 +5,7 @@ import { withZod } from "@remix-validated-form/with-zod";
 import { z } from "zod";
 import { ValidatedForm, validationError } from "remix-validated-form";
 import { useNavigation } from "@remix-run/react";
+import { hash } from "@/lib/passwordHashing.server";
 
 export const validator = withZod(
   z.object({
@@ -26,13 +27,12 @@ export async function action({ request, context }: ActionFunctionArgs) {
   const cookieHeader = request.headers.get("Cookie");
   const fSession = await flashSession.getSession(cookieHeader);
   let user = null;
+
   try {
     user = await authenticator.authenticate("form", request, {
-      context: {
         formData,
         request,
         context,
-      },
     });
   } catch (e) {
     console.log(e);

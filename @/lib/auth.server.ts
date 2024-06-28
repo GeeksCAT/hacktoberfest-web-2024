@@ -8,7 +8,7 @@ import { verify } from "./passwordHashing.server";
 import { drizzle } from "drizzle-orm/d1";
 
 export const authenticator = new Authenticator<{
-  email: string;
+  email: string | null;
   id: number;
 }>(authSessionStorage);
 
@@ -16,6 +16,7 @@ authenticator.use(
   new FormStrategy(async ({ form, context }: any) => {
     const email = form.get("email");
     const password = form.get("password");
+
     const env = context.cloudflare.env as Env;
     const db = drizzle(env.DB);
 
@@ -37,6 +38,7 @@ authenticator.use(
       hash: possibleUser.password,
       password: password,
     });
+
     if (!passwordValid) {
       throw new Error("Invalid email or password");
     }

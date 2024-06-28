@@ -6,14 +6,13 @@ import {
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
 import { drizzle } from 'drizzle-orm/d1';
+import { eq } from "drizzle-orm";
 import { OpenSourceProject, open_source_projects } from "db/schema";
 
 import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
 import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
-import { hash } from "@/lib/passwordHashing.server";
-// import Button from "@/components/button";
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,7 +28,11 @@ export const loader: LoaderFunction = async ({ context }) => {
   const env = context.cloudflare.env as Env;
 
   const db = drizzle(env.DB);
-  const { results: latestProjects} = await db.select().from(open_source_projects).limit(10).run();
+  const { results: latestProjects} = await db.select()
+    .from(open_source_projects)
+    .where(eq(open_source_projects.visible,1))
+    .limit(10)
+    .run();
 
   return json(latestProjects);
 };
