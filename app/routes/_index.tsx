@@ -90,9 +90,10 @@ export default function Index() {
                   Sobre Nosaltres
                 </h2>
                 <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-                  Som un grup de persones interessades en el món de l'Open Source
-                  de l'associació <span className="year font-bold">GeeksCAT</span>{" "}
-                  que organitzem esdeveniments per promoure la cultura de l'Open
+                  Som un grup de persones interessades en el món de l'Open
+                  Source de l'associació{" "}
+                  <span className="year font-bold">GeeksCAT</span> que
+                  organitzem esdeveniments per promoure la cultura de l'Open
                   Source a Girona.
                 </p>
               </div>
@@ -106,8 +107,6 @@ export default function Index() {
               Descobreix i comparteix
             </h2>
 
-
-
             <p className="mt-1 text-emerald-800">
               Vols fer visible alguna eina/app/blibioteca open source per
               compartir-la amb la comunitat?
@@ -116,25 +115,41 @@ export default function Index() {
               <Link
                 to="/add"
                 replace={true}
-                className="bg-neutral-900 relative z-10 w-fit hover:bg-black/90 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
+                className="bg-neutral-900 relative z-10 w-fit hover:bg-neutral-700 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
               >
                 Afegeix-la aquí
               </Link>
               <HoverEffect items={openSourceProjects}></HoverEffect>
-
             </div>
 
-            {/* <div className="flex mb-16">
-            <div className="flex-1">
-              <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">Busquem patrocinadors pel millor event Open Source de Girona</h2>
+            <div className="mb-10 flex flex-col items-center justify-center">
+              <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-5xl">
+                Vols col·laborar fent una xerrada o taller?
+              </h2>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSevX26lN5JGcmN7-YrcdxprShKhBg91ISHKfXU4-lPYIBvqIQ/viewform"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6"
+              >
+                <button className="inline-flex items-center bg-neutral-900 text-white font-semibold text-lg px-8 py-4 rounded-full hover:bg-neutral-700 transition duration-200">
+                  Envia'ns la teva proposta
+                  <svg
+                    className="ml-2 -mr-1 w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </a>
             </div>
-            <div className="flex flex-1 justify-center items-center">
-              <Button>Contacta'ns</Button>
-            </div>
-          </div> */}
-
-
-
 
             <AboutEvent />
           </div>
