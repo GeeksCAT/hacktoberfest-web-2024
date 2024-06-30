@@ -1,19 +1,31 @@
 import { useState } from "react";
 
 import { Form, useNavigate } from "@remix-run/react";
+import { ActionFunctionArgs, redirect } from "@remix-run/cloudflare";
+
 import { AnimatePresence } from "framer-motion";
 
 import Dialog from "@/components/dialog";
-import { ActionFunctionArgs, redirect } from "@remix-run/cloudflare";
+
+import { open_source_projects } from "db/schema";
+import { drizzle } from "drizzle-orm/d1";
 
 export const action = async ({ context, request }: ActionFunctionArgs) => {
   const env = context.cloudflare.env as Env;
 
   const data = await request.formData();
 
-  await env.DB.prepare(
-    "INSERT INTO open_source_projects (name, description, website) VALUES ($1, $2, $3)"
-  ).bind(data.get("name"), data.get("description"), data.get("website")).run();
+  const db = drizzle(env.DB);
+
+  await db
+    .insert(open_source_projects)
+    .values({
+      name: data.get("name"),
+      description: data.get("description"),
+      website: data.get("website"),
+      visible: "false",
+    })
+    .run();
 
   return redirect("/");
 };
@@ -55,9 +67,7 @@ export default function Edit() {
             </label>
 
             <label>
-              <span className="block">
-                Lloc web
-              </span>
+              <span className="block">Lloc web</span>
               <input
                 name="website"
                 type="url"

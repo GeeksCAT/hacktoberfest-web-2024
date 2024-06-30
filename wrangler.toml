@@ -2,3 +2,4 @@
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "festa-os-2024"
 database_id = "3bc5665c-440f-4d73-9854-a7e57c1d1e7c"
+migrations_dir = "db/migrations"

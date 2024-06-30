@@ -20,6 +20,7 @@ export default defineConfig({
             route("/add", "routes/projects/_add.tsx");
           });
           route("/agenda", "routes/agenda/_index.tsx");
+          route("/open-soruce-projects", "routes/projects/_manage.tsx");
         });
       },
     }),

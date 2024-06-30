@@ -49,10 +49,32 @@ npm run deploy
 
 ## Database
 
-Create the table in remote:
+### Generate migration
 
 ```sh
-wrangler d1 execute 'festa-os-2024' --remote --command "CREATE TABLE IF NOT EXISTS 'open_source_projects' ( id INTEGER PRIMARY KEY, name TEXT, description TEXT, website TEXT, created_at INTEGER);"
+npx drizzle-kit generate
 ```
 
-Replace `--remote` with `--local` to create local development DB
+Create the table in remote:
+
+### Apply migration
+
+First remove the old table if it exists:
+
+```sh	
+wrangler d1 execute 'festa-os-2024' --local --command "DROP TABLE  'open_source_projects'"
+```
+
+Then apply the migration:
+
+```sh
+npx wrangler d1 migrations apply 'festa-os-2024' --local
+```
+
+Replace --local with --remote to apply the migration in the remote database.
+
+### Add user
+
+```sh
+wrangler d1 execute 'festa-os-2024' --local --command "INSERT INTO users (id, email, password ) VALUES (1, '----', '----');"
+```
