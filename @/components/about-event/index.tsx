@@ -58,6 +58,7 @@ export default function AboutEvent() {
             key={index}
             className="rounded-lg  border-2  p-4 transition duration-200 hover:bg-emerald-200 border-emerald-300"
             onClick={() => setCurrentThing(index)}
+            onMouseEnter={() => setCurrentThing(index)}
           >
             <h3 className="mb-4 text-left text-xl font-semibold tracking-wide text-emerald-600 lg:text-2xl">
               {thing.title}
