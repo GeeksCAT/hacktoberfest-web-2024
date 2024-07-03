@@ -90,11 +90,11 @@ export default function Index() {
                   Sobre Nosaltres
                 </h2>
                 <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-                  Som un grup de persones interessades en el món de l'Open
-                  Source de l'associació{" "}
-                  <span className="year font-bold">GeeksCAT</span> que
-                  organitzem esdeveniments per promoure la cultura de l'Open
-                  Source a Girona.
+                  L'associació{" "}<span className="year font-bold">Geeks.CAT</span> és un grup de professionals, 
+                  empreses i estudiants interessats en el món de l'Open Source.
+                </p>
+                <p>
+                  Organitzem esdeveniments per promoure l'Open Source a Girona
                 </p>
               </div>
 
