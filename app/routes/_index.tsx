@@ -103,25 +103,6 @@ export default function Index() {
               </div>
             </div>
 
-            <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
-              Descobreix i comparteix
-            </h2>
-
-            <p className="mt-1 text-emerald-800">
-              Vols fer visible alguna eina/app/blibioteca open source per
-              compartir-la amb la comunitat?
-            </p>
-            <div className="mt-4 mb-4">
-              <Link
-                to="/add"
-                replace={true}
-                className="bg-neutral-900 relative z-10 w-fit hover:bg-neutral-700 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
-              >
-                Afegeix-la aquí
-              </Link>
-              <HoverEffect items={openSourceProjects}></HoverEffect>
-            </div>
-
             <div className="mb-10 flex flex-col items-center justify-center">
               <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-5xl">
                 Vols col·laborar fent una xerrada o taller?
@@ -152,6 +133,26 @@ export default function Index() {
             </div>
 
             <AboutEvent />
+
+            <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
+              Descobreix i comparteix
+            </h2>
+
+            <p className="mt-1 text-emerald-800">
+              Vols fer visible alguna eina/app/blibioteca OpenSource per
+              compartir-la amb la comunitat?
+            </p>
+            <div className="mt-4 mb-4">
+              <Link
+                to="/add"
+                replace={true}
+                className="bg-neutral-900 relative z-10 w-fit hover:bg-neutral-700 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
+              >
+                Afegeix-la aquí
+              </Link>
+              <HoverEffect items={openSourceProjects}></HoverEffect>
+            </div>
+
           </div>
         </div>
       </TracingBeam>
