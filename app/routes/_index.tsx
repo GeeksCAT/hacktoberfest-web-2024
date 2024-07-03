@@ -93,7 +93,7 @@ export default function Index() {
                   L'associació{" "}<span className="year font-bold">Geeks.CAT</span> és un grup de professionals, 
                   empreses i estudiants interessats en el món de l'Open Source.
                 </p>
-                <p>
+                <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
                   Organitzem esdeveniments per promoure l'Open Source a Girona
                 </p>
               </div>
