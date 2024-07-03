@@ -52,11 +52,15 @@ export default function AboutEvent() {
 
       </div>
 
+
+
+
+
       <div className="mx-auto mb-10 mt-20 grid max-w-5xl items-start gap-3 lg:grid-cols-3">
         {eventThings.map((thing, index) => (
           <button
             key={index}
-            className="rounded-lg  border-2  p-4 transition duration-200 hover:bg-emerald-200 border-emerald-300"
+            className="flex flex-col justify-start h-full rounded-lg border-2 p-4 transition duration-200 hover:bg-emerald-200 border-emerald-300"
             onClick={() => setCurrentThing(index)}
             onMouseEnter={() => setCurrentThing(index)}
           >
