@@ -3,21 +3,21 @@ import { useState } from "react";
 export default function AboutEvent() {
   const eventThings = [
     {
-      title: "Marató de PRs",
-      description:
-        "Tindrem un espai on podrem fer PRs a diferents projectes open source per si vols portar-te el portatil!",
-      image: "/images/event_10.jpg",
-    },
-    {
       title: "Xerrades i tallers",
       description:
-        "Tindrem xerrades i tallers sobre diferents temes relacionats amb l'Open Source.",
+        "Aprendràs de la mà d'experts del món de l'Open Source. Decubriràs noves eines per implementar a la teva empresa o activitat",
       image: "/images/event_8.jpg",
+    },
+    {
+      title: "Marató de PRs",
+      description:
+        "Col·labora amb l'Open Source sigui quin sigui el teu nivell. Pensa en dur el teu portàtil!",
+      image: "/images/event_10.jpg",
     },
     {
       title: "Lightning talks",
       description:
-        "Durant la jornada si vols compartir alguna cosa amb la resta podras fer-ho en una lightning talk.",
+        "Si vols compartir alguna cosa amb la resta podras fer-ho en una lightning talk.",
       image: "/images/event_9.jpg",
     },
   ];
@@ -33,12 +33,16 @@ export default function AboutEvent() {
           </h2>
 
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-            Serà una trobada presencial a Girona el dissabte 21/10/2023 a
-            l'espai de la Fundació ”la Caixa” de Girona.
+            Ens reunirem en una trobada presencial a Girona el dissabte 19/10/2024 a Girona.
           </p>
+
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-            Començarem a les 9:30h i finalitzarem a les 19h, amb una pausa per
-            dinar.
+            Començarem a les 9:30h i finalitzarem a les 19h, amb una pausa per dinar. 
+          </p>
+
+          <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+            Gaudirem junts d'una jornada amb moltes activitats: xerrades, tallers per a tots els nivells i perfils, 
+            lighting talks, marató de PRS i molt més!
           </p>
         </div>
 
@@ -48,12 +52,16 @@ export default function AboutEvent() {
 
       </div>
 
+
+
+
+
       <div className="mx-auto mb-10 mt-20 grid max-w-5xl items-start gap-3 lg:grid-cols-3">
         {eventThings.map((thing, index) => (
           <button
             key={index}
-            className="rounded-lg  border-2  p-4 transition duration-200 hover:bg-emerald-200 border-emerald-300"
-            onClick={() => setCurrentThing(index)}
+            className="flex flex-col justify-start h-full rounded-lg border-2 p-4 transition duration-200 hover:bg-emerald-200 border-emerald-300"
+            onMouseEnter={() => setCurrentThing(index)}
           >
             <h3 className="mb-4 text-left text-xl font-semibold tracking-wide text-emerald-600 lg:text-2xl">
               {thing.title}
