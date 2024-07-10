@@ -19,6 +19,7 @@ export default defineConfig({
           route("/", "routes/_index.tsx", () => {
             route("/add", "routes/projects/_add.tsx");
           });
+          route("/patrocina", "routes/sponsor/_index.tsx");
           route("/agenda", "routes/agenda/_index.tsx");
           route("/open-soruce-projects", "routes/projects/_manage.tsx");
         });
