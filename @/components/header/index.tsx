@@ -79,12 +79,12 @@ const MobileMenu = () => {
                   >
                     Ponents
                   </Link> */}
-                  <Link
+                  {/* <Link
                     to="/"
                     className="-mx-3 block rounded-full bg-emerald-300 px-4 py-1.5 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-300"
                   >
                     Inscriu-te
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
