@@ -33,7 +33,7 @@ export default function SponsorPage() {
         <div className="flex-1 flex flex-col gap-4">
           <h2 className="text-start max-w-2xl font-bold text-3xl">
             Donaràs a conèixer la teva empresa entre els prop de{" "}
-            <span className="pretty">200 assistents</span>, interessats en:
+            <span className="pretty">120 assistents</span>, interessats en:
           </h2>
 
           <div className="grid grid-cols-1 gap-2">
