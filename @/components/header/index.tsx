@@ -4,7 +4,7 @@ import { useState } from "react";
 const EventLink = () => (
   <Link to={""}>
     <h1 className="text-emerald-900 max-w-48">
-      Esdeveniment <span className="font-bold">Open Source Girona</span> 2024
+      Festa <span className="font-bold">Open Source Girona</span> 2024
     </h1>
   </Link>
 );
