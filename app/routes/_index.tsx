@@ -140,7 +140,7 @@ export default function Index() {
             </h2>
 
             <p className="mt-1 text-emerald-800">
-              Vols fer visible alguna eina/app/blibioteca OpenSource per
+              Vols fer visible alguna eina/app/llibreria OpenSource per
               compartir-la amb la comunitat?
             </p>
             <div className="mt-4 mb-4">

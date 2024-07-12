@@ -5,7 +5,7 @@ export default function AboutEvent() {
     {
       title: "Xerrades i tallers",
       description:
-        "Aprendràs de la mà d'experts del món de l'Open Source. Decubriràs noves eines per implementar a la teva empresa o activitat",
+        "Aprendràs de la mà d'experts del món de l'Open Source. Descobriràs noves eines per implementar a la teva empresa o activitat",
       image: "/images/event_8.jpg",
     },
     {
@@ -17,7 +17,7 @@ export default function AboutEvent() {
     {
       title: "Lightning talks",
       description:
-        "Si vols compartir alguna cosa amb la resta podras fer-ho en una lightning talk.",
+        "Si vols compartir alguna cosa amb la resta podràs fer-ho en una lightning talk.",
       image: "/images/event_9.jpg",
     },
   ];
@@ -42,7 +42,7 @@ export default function AboutEvent() {
 
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             Gaudirem junts d'una jornada amb moltes activitats: xerrades, tallers per a tots els nivells i perfils, 
-            lighting talks, marató de PRS i molt més!
+            lightning talks, marató de PRS i molt més!
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 const EventLink = () => (
   <Link to={""}>
     <h1 className="text-emerald-900 max-w-48">
-      Esdeveniment <span className="font-bold">Open Source Girona</span> 2024
+      Festa <span className="font-bold">Open Source Girona</span> 2024
     </h1>
   </Link>
 );
@@ -79,12 +79,12 @@ const MobileMenu = () => {
                   >
                     Ponents
                   </Link> */}
-                  <Link
+                  {/* <Link
                     to="/"
                     className="-mx-3 block rounded-full bg-emerald-300 px-4 py-1.5 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-300"
                   >
                     Inscriu-te
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function Header() {
             to={""}
           >
             Ponents
-          </Link> */}
+          </Link>
           <a
             href="https://www.eventbrite.es/e/entradas-festa-opensource-girona-2023-geekscat-gdg-718595698077"
             target="_blank"
@@ -131,7 +131,7 @@ export default function Header() {
             className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-300 hidden md:inline-block"
           >
             Inscriu-te
-          </a>
+          </a> */ }
         </div>
       </div>
     </header>
