@@ -15,7 +15,7 @@ export default function SponsorPage() {
     <div className="mx-auto p-10 max-w-7xl flex flex-col items-center gap-16">
       <div className="relative flex flex-col text-center font-bold md:text-6xl text-4xl bg-clip-text text-transparent bg-gradient-to-b from-emerald-700 to-emerald-400">
         <span>Vols ajudar-nos a seguir</span>
-        <span>fent crèixer i difonent</span>{" "}
+        <span>fent créixer i difonent</span>{" "}
         <span>
           <span className="pretty"> l'Open Source?</span>
         </span>
@@ -38,7 +38,7 @@ export default function SponsorPage() {
 
           <div className="grid grid-cols-1 gap-2">
             <h3 className="text-md font-semibold leading-6 text-slate-900">
-              Inteligència Artificial
+              Intel·ligència Artificial
             </h3>
             <h3 className="text-md font-semibold leading-6 text-slate-900">
               Data Science
@@ -50,7 +50,7 @@ export default function SponsorPage() {
               Programació per mòbils i web: Flutter, Python, Javascript…
             </h3>
             <h3 className="text-md font-semibold leading-6 text-slate-900">
-              Creació de video-jocs
+              Creació de videojocs
             </h3>
             <h3 className="text-md font-semibold leading-6 text-slate-900">
               … i molt més!
