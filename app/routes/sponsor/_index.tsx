@@ -15,9 +15,9 @@ export default function SponsorPage() {
     <div className="mx-auto p-10 max-w-7xl flex flex-col items-center gap-16">
       <div className="relative flex flex-col text-center font-bold md:text-6xl text-4xl bg-clip-text text-transparent bg-gradient-to-b from-emerald-700 to-emerald-400">
         <span>Vols ajudar-nos a seguir</span>
-        <span>fent crèixer i difonentona</span>{" "}
+        <span>fent crèixer i difonent</span>{" "}
         <span>
-          <span className="pretty"> l’Open Source?</span>
+          <span className="pretty"> l'Open Source?</span>
         </span>
       </div>
 
@@ -33,7 +33,7 @@ export default function SponsorPage() {
         <div className="flex-1 flex flex-col gap-4">
           <h2 className="text-start max-w-2xl font-bold text-3xl">
             Donaràs a conèixer la teva empresa entre els prop de{" "}
-            <span className="pretty">200 assistents</span>, interessats/des en:
+            <span className="pretty">200 assistents</span>, interessats en:
           </h2>
 
           <div className="grid grid-cols-1 gap-2">
