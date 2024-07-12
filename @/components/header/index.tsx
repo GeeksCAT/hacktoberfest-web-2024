@@ -106,6 +106,12 @@ export default function Header() {
           <div className="md:hidden">
             <MobileMenu />
           </div>
+          <Link
+            className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
+            to="/patrocina"
+          >
+            Patrocina
+          </Link>
           {/* <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
             to="/agenda"
