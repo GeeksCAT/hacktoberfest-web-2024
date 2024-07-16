@@ -66,7 +66,7 @@ export default function SponsorPage() {
         className="mt-6"
       >
         <button className="inline-flex items-center bg-neutral-900 text-white font-semibold text-lg px-8 py-4 rounded-full hover:bg-neutral-700 transition duration-200">
-          Patrocina'ns
+          Patrocina
           <svg
             className="ml-2 -mr-1 w-5 h-5"
             fill="currentColor"
