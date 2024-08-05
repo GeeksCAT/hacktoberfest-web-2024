@@ -13,6 +13,8 @@ import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
 import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
+import { Heading2 } from "@/components/headings/";
+
 import SponsorsList from "@/components/sponsors-list";
 
 export const meta: MetaFunction = () => {
@@ -88,9 +90,9 @@ export default function Index() {
           <div className="mt-20 mx-auto p-10 max-w-7xl">
             <div className="flex md:flex-row flex-col gap-5 items-center justify-center mb-10">
               <div className="relative flex flex-col">
-                <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
+                <Heading2>
                   Sobre Nosaltres
-                </h2>
+                </Heading2>
                 <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
                   L'associació{" "}<span className="year font-bold">Geeks.CAT</span> és un grup de professionals, 
                   empreses i estudiants interessats en el món de l'Open Source.
@@ -106,9 +108,9 @@ export default function Index() {
             </div>
 
             <div className="mb-10 flex flex-col items-center justify-center">
-              <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-5xl">
+              <Heading2 className="sm:text-5xl">
                 Vols col·laborar fent una xerrada o taller?
-              </h2>
+              </Heading2>
 
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSevX26lN5JGcmN7-YrcdxprShKhBg91ISHKfXU4-lPYIBvqIQ/viewform"
@@ -138,8 +140,9 @@ export default function Index() {
 
             <SponsorsList />
 
+            <Heading2 className="text-2xl md:text-4xl md:leading-tight">
               Descobreix i comparteix
-            </h2>
+            </Heading2>
 
             <p className="mt-1 text-emerald-800">
               Vols fer visible alguna eina/app/llibreria OpenSource per
