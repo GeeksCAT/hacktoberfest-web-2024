@@ -13,6 +13,7 @@ import ImageInfiniteCarousel from "@/components/image-infinite-carousel";
 import AboutEvent from "@/components/about-event";
 import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
+import SponsorsList from "@/components/sponsors-list";
 
 export const meta: MetaFunction = () => {
   return [
@@ -135,7 +136,8 @@ export default function Index() {
 
             <AboutEvent />
 
-            <h2 className="text-emerald-600 font-semibold text-2xl md:text-4xl md:leading-tight">
+            <SponsorsList />
+
               Descobreix i comparteix
             </h2>
 
