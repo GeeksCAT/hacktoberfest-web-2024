@@ -5,7 +5,7 @@ import {
 } from "@remix-run/cloudflare";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
 
-import { drizzle } from 'drizzle-orm/d1';
+import { drizzle } from "drizzle-orm/d1";
 import { eq } from "drizzle-orm";
 import { OpenSourceProject, open_source_projects } from "db/schema";
 
@@ -15,7 +15,7 @@ import { TracingBeam } from "@/components/tracing-beam";
 import { HoverEffect } from "@/components/card-hover-effect";
 import { Heading2 } from "@/components/headings/";
 
-import SponsorsList from "@/components/sponsors-list";
+import { SponsorsList, SupporterList } from "@/components/sponsors-list";
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,9 +31,10 @@ export const loader: LoaderFunction = async ({ context }) => {
   const env = context.cloudflare.env as Env;
 
   const db = drizzle(env.DB);
-  const { results: latestProjects} = await db.select()
+  const { results: latestProjects } = await db
+    .select()
     .from(open_source_projects)
-    .where(eq(open_source_projects.visible,1))
+    .where(eq(open_source_projects.visible, 1))
     .limit(10)
     .run();
 
@@ -90,12 +91,11 @@ export default function Index() {
           <div className="mt-20 mx-auto p-10 max-w-7xl">
             <div className="flex md:flex-row flex-col gap-5 items-center justify-center mb-10">
               <div className="relative flex flex-col">
-                <Heading2>
-                  Sobre Nosaltres
-                </Heading2>
+                <Heading2>Sobre Nosaltres</Heading2>
                 <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-                  L'associació{" "}<span className="year font-bold">Geeks.CAT</span> és un grup de professionals, 
-                  empreses i estudiants interessats en el món de l'Open Source.
+                  L'associació <span className="year font-bold">Geeks.CAT</span>{" "}
+                  és un grup de professionals, empreses i estudiants interessats
+                  en el món de l'Open Source.
                 </p>
                 <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
                   Organitzem esdeveniments per promoure l'Open Source a Girona
@@ -103,7 +103,10 @@ export default function Index() {
               </div>
 
               <div className="max-w-64 md:max-w-96">
-                <img src="/logo.png" alt="Open Source Girona" />
+                <img
+                  src="/logo.png"
+                  alt="Open Source Girona"
+                />
               </div>
             </div>
 
@@ -138,8 +141,6 @@ export default function Index() {
 
             <AboutEvent />
 
-            <SponsorsList />
-
             <Heading2 className="text-2xl md:text-4xl md:leading-tight">
               Descobreix i comparteix
             </Heading2>
@@ -159,6 +160,9 @@ export default function Index() {
               <HoverEffect items={openSourceProjects}></HoverEffect>
             </div>
 
+            <SupporterList />
+
+            <SponsorsList />
           </div>
         </div>
       </TracingBeam>

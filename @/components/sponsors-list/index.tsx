@@ -111,3 +111,11 @@ export function SponsorsLister({
     </div>
   );
 }
+
+export function SponsorsList() {
+  return SponsorsLister({ sponsorType: "sponsor" });
+}
+
+export function SupporterList() {
+  return SponsorsLister({ sponsorType: "supporter" });
+}
