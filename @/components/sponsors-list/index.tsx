@@ -6,7 +6,7 @@ export interface EventSponsor {
   web: string;
 }
 
-export const sponsorsList: EventSponsor[] = [
+export const supportersList: EventSponsor[] = [
   {
     logo: "sponsors/ajuntamentGirona.png",
     name: "Som Energia",
@@ -17,6 +17,9 @@ export const sponsorsList: EventSponsor[] = [
     name: "Som Energia",
     web: "https://www.somenergia.coop/es/",
   },
+];
+
+export const sponsorsList: EventSponsor[] = [
   {
     logo: "sponsors/logo_som_energia.svg",
     name: "Som Energia",
