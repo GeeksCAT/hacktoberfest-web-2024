@@ -31,7 +31,7 @@ export const sponsorsList: EventSponsor[] = [
     web: "https://kavehome.com/es/ca/",
   },
   //   {
-  //     logo: "apsl.png",
+  //     logo: "Nagarro_Horizontal_Light.png",
   //     name: "APSL",
   //     web: "https://apsl.tech/es/",
   //   },
