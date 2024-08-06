@@ -72,15 +72,24 @@ const gridCols = {
   xl: Math.min(sponsorsList.length, 6),
 };
 
-export default function SponsorsList() {
+export function SponsorsLister({
+  sponsorType,
+}: {
+  sponsorType: "supporter" | "sponsor";
+}) {
+  const entriesList =
+    sponsorType === "supporter" ? supportersList : sponsorsList;
+  const title =
+    sponsorType === "supporter" ? "Amb el suport de" : "Amb el patrocini de";
+
   return (
     <div className="my-20">
-      <Heading2>Amb el suport de</Heading2>
+      <Heading2>{title}</Heading2>
 
       <div
         className={`mt-10 items-center justify-center grid gap-5 grid-cols-1 sm:gap-10 sm:grid-cols-${gridCols.sm} xl:grid-cols-${gridCols.xl}`}
       >
-        {sponsorsList.map((_sponsor) => (
+        {entriesList.map((_sponsor) => (
           <div className="">
             <a
               href={_sponsor.web}
