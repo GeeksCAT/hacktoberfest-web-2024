@@ -67,15 +67,6 @@ export const sponsorsList: EventSponsor[] = [
   //   },
 ];
 
-const supportersGridCols = {
-  sm: Math.min(supportersList.length, 3),
-  xl: Math.min(supportersList.length, 6),
-};
-const sponsorsGridCols = {
-  sm: Math.min(sponsorsList.length, 3),
-  xl: Math.min(sponsorsList.length, 6),
-};
-
 export function SponsorsLister({
   sponsorType,
 }: {
@@ -85,7 +76,10 @@ export function SponsorsLister({
   const isSupporter = sponsorType === "supporter";
   const entriesList = isSupporter ? supportersList : sponsorsList;
   const title = isSupporter ? "Amb el suport de" : "Amb el patrocini de";
-  const gridCols = isSupporter ? supportersGridCols : sponsorsGridCols;
+  const gridCols = {
+        sm: Math.min(entriesList.length, 2),
+        xl: Math.min(entriesList.length, 4),
+      }
 
   return (
     <div className="my-20">
@@ -94,8 +88,8 @@ export function SponsorsLister({
       <div
         className={`mt-10 items-center justify-center grid gap-5 grid-cols-1 sm:gap-10 sm:grid-cols-${gridCols.sm} xl:grid-cols-${gridCols.xl}`}
       >
-        {entriesList.map((_sponsor) => (
-          <div className="">
+        {entriesList.map((_sponsor, _index) => (
+          <div key={_index} className="">
             <a
               href={_sponsor.web}
               target="_blank"
