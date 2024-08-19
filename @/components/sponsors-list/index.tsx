@@ -30,11 +30,11 @@ export const sponsorsList: EventSponsor[] = [
     name: "Kave Home",
     web: "https://kavehome.com/es/ca/",
   },
-  //   {
-  //     logo: "Nagarro_Horizontal_Light.png",
-  //     name: "APSL",
-  //     web: "https://apsl.tech/es/",
-  //   },
+  {
+    logo: "sponsors/Nagarro_Horizontal_Light.svg",
+    name: "APSL",
+    web: "https://apsl.tech/es/",
+  },
   //   {
   //     logo: "logo_som_energia.svg",
   //     name: "Som Energia",
@@ -67,7 +67,11 @@ export const sponsorsList: EventSponsor[] = [
   //   },
 ];
 
-const gridCols = {
+const supportersGridCols = {
+  sm: Math.min(supportersList.length, 3),
+  xl: Math.min(supportersList.length, 6),
+};
+const sponsorsGridCols = {
   sm: Math.min(sponsorsList.length, 3),
   xl: Math.min(sponsorsList.length, 6),
 };
@@ -76,11 +80,12 @@ export function SponsorsLister({
   sponsorType,
 }: {
   sponsorType: "supporter" | "sponsor";
-}) {
-  const entriesList =
-    sponsorType === "supporter" ? supportersList : sponsorsList;
-  const title =
-    sponsorType === "supporter" ? "Amb el suport de" : "Amb el patrocini de";
+  }) {
+  
+  const isSupporter = sponsorType === "supporter";
+  const entriesList = isSupporter ? supportersList : sponsorsList;
+  const title = isSupporter ? "Amb el suport de" : "Amb el patrocini de";
+  const gridCols = isSupporter ? supportersGridCols : sponsorsGridCols;
 
   return (
     <div className="my-20">
