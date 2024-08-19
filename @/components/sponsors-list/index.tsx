@@ -30,11 +30,11 @@ export const sponsorsList: EventSponsor[] = [
     name: "Kave Home",
     web: "https://kavehome.com/es/ca/",
   },
-  //   {
-  //     logo: "Nagarro_Horizontal_Light.png",
-  //     name: "APSL",
-  //     web: "https://apsl.tech/es/",
-  //   },
+  {
+    logo: "sponsors/Nagarro_Horizontal_Light.svg",
+    name: "APSL",
+    web: "https://apsl.tech/es/",
+  },
   //   {
   //     logo: "logo_som_energia.svg",
   //     name: "Som Energia",
@@ -67,20 +67,19 @@ export const sponsorsList: EventSponsor[] = [
   //   },
 ];
 
-const gridCols = {
-  sm: Math.min(sponsorsList.length, 3),
-  xl: Math.min(sponsorsList.length, 6),
-};
-
 export function SponsorsLister({
   sponsorType,
 }: {
   sponsorType: "supporter" | "sponsor";
-}) {
-  const entriesList =
-    sponsorType === "supporter" ? supportersList : sponsorsList;
-  const title =
-    sponsorType === "supporter" ? "Amb el suport de" : "Amb el patrocini de";
+  }) {
+  
+  const isSupporter = sponsorType === "supporter";
+  const entriesList = isSupporter ? supportersList : sponsorsList;
+  const title = isSupporter ? "Amb el suport de" : "Amb el patrocini de";
+  const gridCols = {
+        sm: Math.min(entriesList.length, 2),
+        xl: Math.min(entriesList.length, 4),
+      }
 
   return (
     <div className="my-20">
@@ -89,8 +88,8 @@ export function SponsorsLister({
       <div
         className={`mt-10 items-center justify-center grid gap-5 grid-cols-1 sm:gap-10 sm:grid-cols-${gridCols.sm} xl:grid-cols-${gridCols.xl}`}
       >
-        {entriesList.map((_sponsor) => (
-          <div className="">
+        {entriesList.map((_sponsor, _index) => (
+          <div key={_index} className="">
             <a
               href={_sponsor.web}
               target="_blank"
