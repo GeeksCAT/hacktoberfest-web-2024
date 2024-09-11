@@ -19,10 +19,10 @@ import { SponsorsList, SupporterList } from "@/components/sponsors-list";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Hacktoberfest" },
+    { title: "Festa Open Source Girona 2024" },
     {
       name: "description",
-      content: "OpenSource Girona 2024",
+      content: "Festa Open Source Girona 2024",
     },
   ];
 };
