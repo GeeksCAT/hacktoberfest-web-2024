@@ -20,7 +20,6 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   if (!userSession) {
     return redirect("/login");
   }
-  */
   const user = await db
     .select({
       id: users.id,
@@ -33,6 +32,8 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   if (!user) {
     return redirect("/login");
   }
+  */
+
 
   const { results: openSourceProjects } = await db
     .select()
