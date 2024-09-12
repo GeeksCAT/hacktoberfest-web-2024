@@ -16,6 +16,7 @@ import { HoverEffect } from "@/components/card-hover-effect";
 import { Heading2 } from "@/components/headings/";
 
 import { SponsorsList, SupporterList } from "@/components/sponsors-list";
+import { useEffect, useState } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -53,6 +54,10 @@ export default function Index() {
   ];
 
   const openSourceProjects = useLoaderData<OpenSourceProject[]>();
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="relative overflow-hidden py-20 md:py-0">
@@ -103,10 +108,7 @@ export default function Index() {
               </div>
 
               <div className="max-w-64 md:max-w-96">
-                <img
-                  src="/logo.png"
-                  alt="Open Source Girona"
-                />
+                <img src="/logo.png" alt="Open Source Girona" />
               </div>
             </div>
 
@@ -140,6 +142,33 @@ export default function Index() {
             </div>
 
             <AboutEvent />
+
+            <div className="mb-20">
+              <h2 className="font-display text-5xl font-bold tracking-tighter text-emerald-500 sm:text-7xl">
+                On serà?
+              </h2>
+              <div className="flex flex-col md:flex-row gap-5 mt-6">
+                <div className="w-full">
+                  <iframe
+                    title="Casa de Cultura de Girona location"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d189921.19973057494!2d2.7239305!3d41.9461916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae6def75615a5%3A0x5ca81fd3c312edd4!2sCasa%20de%20Cultura%20de%20Girona!5e0!3m2!1ses!2ses!4v1726168992256!5m2!1ses!2ses"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div>
+                  <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+                    Aquest cop ens reunirem a la <span className="pretty font-bold">Casa de Cultura de Girona</span>, 
+                    a Pl. de l'Hospital, 6, 17002 Girona.
+                  </p>
+                  <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+                    Ens trobatem a la 2a planta, que estara tota reservada per a l'esdeveniment.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <Heading2 className="text-2xl md:text-4xl md:leading-tight">
               Descobreix i comparteix
