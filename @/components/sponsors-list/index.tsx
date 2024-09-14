@@ -4,6 +4,7 @@ export interface EventSponsor {
   logo: string;
   name: string;
   web: string;
+  inf?: string;
 }
 
 export const supportersList: EventSponsor[] = [
@@ -11,11 +12,13 @@ export const supportersList: EventSponsor[] = [
     logo: "sponsors/ajuntamentGirona.png",
     name: "Som Energia",
     web: "https://www.somenergia.coop/es/",
+    inf: "finançament",
   },
   {
     logo: "sponsors/assoc-catosfera-logo-2019.png",
     name: "Som Energia",
     web: "https://www.somenergia.coop/es/",
+    inf: "espai i logística",
   },
 ];
 
@@ -71,15 +74,14 @@ export function SponsorsLister({
   sponsorType,
 }: {
   sponsorType: "supporter" | "sponsor";
-  }) {
-  
+}) {
   const isSupporter = sponsorType === "supporter";
   const entriesList = isSupporter ? supportersList : sponsorsList;
   const title = isSupporter ? "Amb el suport de" : "Amb el patrocini de";
   const gridCols = {
-        sm: Math.min(entriesList.length, 2),
-        xl: Math.min(entriesList.length, 4),
-      }
+    sm: Math.min(entriesList.length, 2),
+    xl: Math.min(entriesList.length, 4),
+  };
 
   return (
     <div className="my-20">
@@ -89,7 +91,7 @@ export function SponsorsLister({
         className={`mt-10 items-center justify-center grid gap-5 grid-cols-1 sm:gap-10 sm:grid-cols-${gridCols.sm} xl:grid-cols-${gridCols.xl}`}
       >
         {entriesList.map((_sponsor, _index) => (
-          <div key={_index} className="">
+          <div key={_index} className="flex flex-col gap-4">
             <a
               href={_sponsor.web}
               target="_blank"
@@ -104,6 +106,9 @@ export function SponsorsLister({
               />
               {/* { _sponsor.name } */}
             </a>
+            {_sponsor.inf && (
+              <p className="text-center text-black-100 font-bold">[{_sponsor.inf}]</p>
+            )}
           </div>
         ))}
       </div>
