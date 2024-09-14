@@ -14,7 +14,7 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   const env = context.cloudflare.env as Env;
 
   const db = drizzle(env.DB);
-
+  /*
   const userSession = await authenticator.isAuthenticated(request);
   if (!userSession) {
     return redirect("/login");
@@ -31,6 +31,7 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   if (!user) {
     return redirect("/login");
   }
+  */
 
   const { results: openSourceProjects } = await db
     .select()

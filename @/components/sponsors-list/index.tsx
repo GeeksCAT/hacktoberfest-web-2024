@@ -38,15 +38,15 @@ export const sponsorsList: EventSponsor[] = [
     name: "APSL",
     web: "https://apsl.tech/es/",
   },
+  {
+    logo: "sponsors/gisce.png",
+    name: "GISCE",
+    web: "https://gisce.net/es/",
+  },
   //   {
   //     logo: "logo_som_energia.svg",
   //     name: "Som Energia",
   //     web: "https://www.somenergia.coop/es/",
-  //   },
-  //   {
-  //     logo: "gisce.png",
-  //     name: "GISCE",
-  //     web: "https://gisce.net/es/",
   //   },
   //   {
   //     logo: "fundcraft.png",
