@@ -17,6 +17,7 @@ import { Heading2 } from "@/components/headings/";
 
 import { SponsorsList, SupporterList } from "@/components/sponsors-list";
 import { useEffect, useState } from "react";
+import BuyTicketsLink from "@/components/buy-tickets-btn";
 
 export const meta: MetaFunction = () => {
   return [
@@ -70,6 +71,10 @@ export default function Index() {
               <span className="pretty">19/10/2024</span>
             </span>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <BuyTicketsLink />
         </div>
 
         <div className="pt-6 pt-32 sm:pt-32">
@@ -152,7 +157,7 @@ export default function Index() {
                   <iframe
                     title="Casa de Cultura de Girona location"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d189921.19973057494!2d2.7239305!3d41.9461916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae6def75615a5%3A0x5ca81fd3c312edd4!2sCasa%20de%20Cultura%20de%20Girona!5e0!3m2!1ses!2ses!4v1726168992256!5m2!1ses!2ses"
-                    width="600"
+                    className="w-full"
                     height="450"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

@@ -67,6 +67,14 @@ const MobileMenu = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-emerald-500/10">
                 <div className="space-y-2 py-6">
+                  <Link
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
+                    to="https://pretix.eu/geekscat/os24/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Entrades
+                  </Link>
                   {/* <Link
                     to="/agenda"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
@@ -108,9 +116,11 @@ export default function Header() {
           </div>
           <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
-            to="/patrocina"
+            to="https://pretix.eu/geekscat/os24/"
+            target="_blank"
+            rel="noreferrer"
           >
-            Patrocina
+            Entrades
           </Link>
           {/* <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
@@ -131,7 +141,7 @@ export default function Header() {
             className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-emerald-950 transition duration-300 hover:bg-emerald-300 hidden md:inline-block"
           >
             Inscriu-te
-          </a> */ }
+          </a> */}
         </div>
       </div>
     </header>
