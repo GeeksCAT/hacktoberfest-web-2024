@@ -43,6 +43,16 @@ export const sponsorsList: EventSponsor[] = [
     name: "GISCE",
     web: "https://gisce.net/es/",
   },
+  {
+    logo: "sponsors/frenchsalads.png",
+    name: "French Salads",
+    web: "https://frenchsalads.com"
+  },
+  {
+    logo: "sponsors/clouding.png",
+    name: "Clouding",
+    web: "https://clouding.io/",
+  },
   //   {
   //     logo: "logo_som_energia.svg",
   //     name: "Som Energia",
@@ -57,11 +67,6 @@ export const sponsorsList: EventSponsor[] = [
   //     logo: "photopills.png",
   //     name: "PhotoPills",
   //     web: "https://www.photopills.com/es",
-  //   },
-  //   {
-  //     logo: "clouding.png",
-  //     name: "Clouding",
-  //     web: "https://clouding.io/",
   //   },
   //   {
   //     logo: "dobleseo.png",
