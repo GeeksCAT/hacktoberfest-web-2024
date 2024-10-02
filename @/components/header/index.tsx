@@ -68,6 +68,12 @@ const MobileMenu = () => {
               <div className="-my-6 divide-y divide-emerald-500/10">
                 <div className="space-y-2 py-6">
                   <Link
+                    to="/agenda"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
+                  >
+                    Agenda
+                  </Link>
+                  <Link
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
                     to="https://pretix.eu/geekscat/os24/"
                     target="_blank"
@@ -75,13 +81,7 @@ const MobileMenu = () => {
                   >
                     Entrades
                   </Link>
-                  {/* <Link
-                    to="/agenda"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
-                  >
-                    Agenda
-                  </Link>
-                  <Link
+                  {/*<Link
                     to="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
                   >
@@ -116,19 +116,19 @@ export default function Header() {
           </div>
           <Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
+            to="/agenda"
+          >
+            Agenda
+          </Link>
+          <Link
+            className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
             to="https://pretix.eu/geekscat/os24/"
             target="_blank"
             rel="noreferrer"
           >
             Entrades
           </Link>
-          {/* <Link
-            className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
-            to="/agenda"
-          >
-            Agenda
-          </Link>
-          <Link
+          {/*<Link
             className="text-sm font-semibold text-emerald-600 hover:text-emerald-900 hidden md:inline-block"
             to={""}
           >
