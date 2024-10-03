@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@remix-run/react";
 
 export default function AboutEvent() {
   const eventThings = [
@@ -49,7 +50,7 @@ export default function AboutEvent() {
             Per més informació
             <Link
               to="/agenda"
-              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
+              className="text-sm font-semibold text-emerald-600 hover:text-emerald-900"
             >
               consulta l'agenda detallada
             </Link>
