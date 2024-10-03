@@ -42,7 +42,17 @@ export default function AboutEvent() {
 
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             Gaudirem junts d'una jornada amb moltes activitats: xerrades, tallers per a tots els nivells i perfils, 
-            lightning talks, marató de PRS i molt més!
+            lightning talks, marató de PRS i molt més! 
+          </p>
+
+          <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+            Per més informació
+            <Link
+              to="/agenda"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-emerald-900 hover:bg-emerald-50"
+            >
+              consulta l'agenda detallada
+            </Link>
           </p>
         </div>
 
