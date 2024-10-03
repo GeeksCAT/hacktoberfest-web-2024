@@ -1,0 +1,32 @@
+---
+title: Introducció al motor de jocs Godot
+duracio: Llarga, una horeta ( perquè m'enrotllo una mica :-D )
+tags: [godot, jocs]
+who: Qualsevol públic
+background: No es requereixen coneixements previs
+sala: Auditori
+---
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<div class="flex gap-3.5 pt-4 flex-wrap">
+    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
+        <p>{frontmatter.sala}</p>
+    </div>
+    {
+        frontmatter.tags.map((tag, index) => (
+            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
+                <p>{tag}</p>
+            </div>
+        ))
+    }
+</div>
+
+# {frontmatter.title}
+
+
+Doncs una introducció al Godot: com és, com funciona, com es programen els jocs, on trobar info ... i segurament també una mica de secció sobre jocs HTML5 i d'on treure assets 

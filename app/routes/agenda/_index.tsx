@@ -1,5 +1,6 @@
 import cx from "@/utilities/cx";
 import { MetaFunction } from "@remix-run/cloudflare";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -38,7 +39,16 @@ const Time = ({ time }: { time: string }) => (
   </div>
 );
 
+const SessionLink = ({ to, children }: { to?: string; children: React.ReactNode }) => {
+  if (to) {
+    return <Link to={to} className="cursor-pointer hover:underline">
+      {children}
+    </Link>;
+  }
+  return <>{children}</>;
+}
 const Session = ({
+  to,
   tags,
   title,
   speaker,
@@ -46,6 +56,7 @@ const Session = ({
   extraTags,
   cols = 3,
 }: {
+  to?: string;
   cols?: number;
   tags?: string[];
   extraTags?: string[];
@@ -79,8 +90,10 @@ const Session = ({
     </div>
     <div className="px-4 pb-4">
       <div className="py-2">
-        <p className="text-base font-normal text-[#040404]">{title}</p>
-        <p className="mt-1 text-xs font-normal text-[#040404]">{speaker}</p>
+        <SessionLink to={to}>
+          <p className="text-base font-normal text-[#040404]">{title}</p>
+          <p className="mt-1 text-xs font-normal text-[#040404]">{speaker}</p>
+        </SessionLink>
       </div>
     </div>
   </div>
@@ -197,6 +210,7 @@ export default function AgendaPage() {
               speaker="Laura Mora i Aubert"
             />
             <Session
+              to="/talk/introduccio-al-motor-de-jocs-godot"
               tags={["Aula A"]}
               extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
@@ -216,6 +230,7 @@ export default function AgendaPage() {
               speaker="Ivan Fraixedes Cugat"
             />
             <Session
+              to="/talk/introduccio-al-motor-de-jocs-godot"
               tags={["Aula A"]}
               extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
