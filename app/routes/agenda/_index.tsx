@@ -293,7 +293,7 @@ export default function AgendaPage() {
             <Session
               tags={["Aula A"]}
               extraTags={["Rust", "Exercicis", "Aprenentatge"]}
-              title="Rust hacking hour"
+              title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
