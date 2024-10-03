@@ -167,7 +167,7 @@ export default function AgendaPage() {
               tags={["Auditori"]}
               extraTags={["Python", "Privadesa", "Sobirania", "GDPR", "Vue3"]}
               title="Crea formularis ètics amb LiberaForms"
-              speaker="Andrés "
+              speaker="Andrés (Evilham)"
             />
             <Session
               tags={["Aula A"]}
