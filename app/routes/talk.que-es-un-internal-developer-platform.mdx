@@ -5,7 +5,12 @@ tags: [Docker, Kubernetes, Git]
 who: Estudiants informàtics i professionals
 background: Coneixements bàsics de programació i/o sistemes informàtics
 sala: Auditori
+speaker: Joel Pérez Morales
+website: https://www.linkedin.com/in/joelpmorales/
 ---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -13,19 +18,11 @@ export const meta = () => {
   ];
 };
 
-<div class="flex gap-3.5 pt-4 flex-wrap">
-    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
-        <p>{frontmatter.sala}</p>
-    </div>
-    {
-        frontmatter.tags.map((tag, index) => (
-            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                <p>{tag}</p>
-            </div>
-        ))
-    }
-</div>
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
 
 # {frontmatter.title}
 
-Consisteix en explicar el concepte de 'Platform Engineering' i d'una de les peces clau: un Internal Developer Platform. Es tractaria de fer una petita demo tot utilitzant Kubernetes, Git, ArgoCD i altres eines tot explicant tots els components i conceptes que es veuen involucrats i com seria tot plegat en un entorn productiu.
+En els últims anys la cultura DevOps s'ha popularitzat a moltes empreses, però, és realment per tothom? En aquesta xerrada aprendrem sobre una nova disciplina que proposa una solució real i concreta per . Parlarem de com podem combinar tecnologies aparentment diferenciades com Git o Kubernetes per permetre que els desenvolupadors puguin desplegar fàcilment les seves aplicacions complint tots els estàndards de la companyia
+
+
+<Speaker name={frontmatter.speaker} website={frontmatter.website} />

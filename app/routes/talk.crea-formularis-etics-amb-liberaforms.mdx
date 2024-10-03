@@ -1,11 +1,15 @@
 ---
 title: Crea formularis ètics amb LiberaForms
 duracio: Curta
-tags: [sobirania, privadesa, gdpr, python, vue3]
+tags: [Python, Privadesa, Sobirania, GDPR, Vue3]
 who: qualsevol públic
 background: Cap
 sala: Auditori
+speaker: Andrés aka Evilham
+website: https://evilham.com
 ---
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -13,19 +17,10 @@ export const meta = () => {
   ];
 };
 
-<div class="flex gap-3.5 pt-4 flex-wrap">
-    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
-        <p>{frontmatter.sala}</p>
-    </div>
-    {
-        frontmatter.tags.map((tag, index) => (
-            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                <p>{tag}</p>
-            </div>
-        ))
-    }
-</div>
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
 
 # {frontmatter.title}
 
-Presentem una eina de programari lliure pensada i desenvolupada com a infraestructura comunitària, lliure i ètica que permet crear i gestionar formularis que respecten els drets digitals de les persones que en fan ús.
+Presentem una eina de "kilòmetre zero", pensada i desenvolupada com a infraestructura comunitària, lliure i ètica que permet crear i gestionar formularis que respecten els drets digitals de les persones que en fan ús.
+
+<Speaker name={frontmatter.speaker} website={frontmatter.website} />

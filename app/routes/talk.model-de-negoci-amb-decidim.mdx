@@ -1,0 +1,24 @@
+---
+title: Model de negoci amb Decidim
+duracio: Curta
+tags: [Ruby on Rails, Monetitzar]
+who: 
+background: 
+sala: Auditori
+speaker: Oliver Valls
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+
+# {frontmatter.title}
+
+Per confirmar

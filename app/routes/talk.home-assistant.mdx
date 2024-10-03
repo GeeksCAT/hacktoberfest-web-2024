@@ -1,11 +1,16 @@
 ---
 title: Introducció a Home Assistant
 duracio: 60 minuts
-tags: [homeassistant domòtica]
+tags: [Domòtica]
 who: qualsevol públic
 background: no es requereixen coneixements previs
 sala: Aula A
+speaker: Joan Domènech
+x: https://x.com/joandomenech
 ---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -13,19 +18,10 @@ export const meta = () => {
   ];
 };
 
-<div class="flex gap-3.5 pt-4 flex-wrap">
-    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
-        <p>{frontmatter.sala}</p>
-    </div>
-    {
-        frontmatter.tags.map((tag, index) => (
-            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                <p>{tag}</p>
-            </div>
-        ))
-    }
-</div>
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
 
 # {frontmatter.title}
 
-Fer una demo de les possibilitats de controlar els dispositius que puguem tenir a casa.
+Petita introducció a què és i orígens de Home Assistant i part pràctica de fer automatitzacions
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} />

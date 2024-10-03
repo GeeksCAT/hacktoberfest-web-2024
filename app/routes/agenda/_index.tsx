@@ -15,7 +15,7 @@ export const meta: MetaFunction = () => {
 const MaratoPrs = () => (
   <div className="md:flex md:flex-col md:col-span-2 md:min-h-24 min-h-20 items-center justify-center rounded-lg bg-white">
     <div className="flex gap-3.5 pl-4 pt-4 md:hidden">
-      <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined">
+      <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
         <p>Aula d'informatica</p>
       </div>
     </div>
@@ -74,7 +74,7 @@ const Session = ({
       {tags?.map((tag) => (
         <div
           key={tag}
-          className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900  undefined"
+          className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900"
         >
           <p>{tag}</p>
         </div>
@@ -82,7 +82,7 @@ const Session = ({
       {extraTags?.map((tag) => (
         <div
           key={tag}
-          className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined"
+          className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900"
         >
           <p>{tag}</p>
         </div>
@@ -142,13 +142,13 @@ export default function AgendaPage() {
             <Session tags={["Auditori"]} title="Benvinguda + Què és l'OS" />
             <div className="md:flex md:flex-col md:col-span-6 md:min-h-24 min-h-20 items-center justify-center rounded-lg bg-white">
               <div className="flex flex-wrap gap-3.5 pl-4 pt-4 md:hidden">
-                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined">
+                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
                   <p> Aula A </p>
                 </div>
-                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined">
+                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
                   <p> Aula B </p>
                 </div>
-                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined">
+                <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
                   <p> Aula d'informatica </p>
                 </div>
               </div>
@@ -290,12 +290,14 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="16:00 ~ 16:30" />
             <Session
+              to="/talk/glassnode-data-platform-journey"
               tags={["Auditori"]}
               extraTags={["Blockchain", "Airflow", "DBT", "Solana"]}
               title="Glassnode Data Platform journey"
               speaker="Jordi P."
             />
             <Session
+              to="/talk/rust-hacking-hour"
               tags={["Aula A"]}
               extraTags={["Rust", "Exercicis", "Aprenentatge"]}
               title="Taller: Rust hacking hour"
@@ -313,12 +315,14 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="16:30 ~ 17:00" />
             <Session 
+              to="/talk/model-de-negoci-amb-decidim"
               tags={["Auditori"]} 
               extraTags={["Ruby on Rails", "Monetitzar"]}
               title="Model de negoci amb Decidim" 
               speaker="Oliver Valls"
               />
             <Session
+              to="/talk/rust-hacking-hour"
               tags={["Aula A"]}
               extraTags={["Rust", "Exercicis", "Aprenentatge"]}
               title="Taller: Rust hacking hour"

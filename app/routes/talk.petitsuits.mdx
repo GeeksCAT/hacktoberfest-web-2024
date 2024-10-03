@@ -1,11 +1,17 @@
 ---
-title: PetitSuis
+title: PetitSuis, una petita navalla suïssa
 duracio: Llarga
-tags: ["python", "django", "asgi", "IA", "scripting"]
+tags: ["IA", "Python", "Django"]
 who: Addictes a la informàtica
 background: Coneixements en desenvolupament web
 sala: Auditori
+speaker: Laura Mora i Aubert
+x: https://x.com/@blackhold_
+website: https://blackhold.nusepas.com/
 ---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -13,19 +19,10 @@ export const meta = () => {
   ];
 };
 
-<div class="flex gap-3.5 pt-4 flex-wrap">
-    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
-        <p>{frontmatter.sala}</p>
-    </div>
-    {
-        frontmatter.tags.map((tag, index) => (
-            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                <p>{tag}</p>
-            </div>
-        ))
-    }
-</div>
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
 
 # {frontmatter.title}
 
-PetitSuis és una eina d'automatització de processos. El nom del programa ve de "navalla suïssa" i de "petits programes" i pretén ser una eina d'ús intern i per tenir a mà el codi per implementar a futurs programes. Actualment el programa té vàries funcionalitats, algunes d'elles utilitzen APIs de IA, d'altres APIs de tota la vida i d'altres utilitzen llibreries i programes per tractar textos, imatges, vídeos i àudios. PetitSuis està programat amb Django.
+Amb l'aparició de les intel·ligències artificials, l'automatització de processos assoleix nous horitzons. Aquest programa, d'ús intern i desenvolupat amb Django, està concebut per localitzar les limitacions, reptes i fortaleses dels diferents models d'IA existents, tan els propietaris com els opensource
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} />

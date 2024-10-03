@@ -1,11 +1,17 @@
 ---
 title: Introducció al motor de jocs Godot
 duracio: Llarga, una horeta ( perquè m'enrotllo una mica :-D )
-tags: [godot, jocs]
+tags: [Jocs, Godot]
 who: Qualsevol públic
 background: No es requereixen coneixements previs
 sala: Aula A
+speaker: Ivan Reyné Ferrando
+website: https://irigames.com/
+x: https://x.com/irigames2009
 ---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -13,20 +19,10 @@ export const meta = () => {
   ];
 };
 
-<div class="flex gap-3.5 pt-4 flex-wrap">
-    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
-        <p>{frontmatter.sala}</p>
-    </div>
-    {
-        frontmatter.tags.map((tag, index) => (
-            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                <p>{tag}</p>
-            </div>
-        ))
-    }
-</div>
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
 
 # {frontmatter.title}
 
+Donarem a conèixer com funciona i com fer servir el motor de jocs Godot. Explicarem des de com està organitzada la interfície fins a la manera com es recomana estructurar escenes, objectes i codi. La intenció és que al acabar els assistents tinguin els coneixements i la confiança per començar a remenar Godot ells mateixos
 
-Doncs una introducció al Godot: com és, com funciona, com es programen els jocs, on trobar info ... i segurament també una mica de secció sobre jocs HTML5 i d'on treure assets 
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website} />
