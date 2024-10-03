@@ -88,7 +88,7 @@ const Session = ({
 
 export default function AgendaPage() {
   return (
-    <div className="mx-auto p-10 max-w-7xl">
+    <div className="mx-auto max-w-7xl">
       <div className="flex justify-center p-4 md:p-8">
         <div className="flex w-full max-w-screen-xl flex-col gap-4">
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
@@ -128,7 +128,7 @@ export default function AgendaPage() {
             <Time time="10:00 ~ 10:30" />
             <Session tags={["Auditori"]} title="Benvinguda + Què és l'OS" />
             <div className="md:flex md:flex-col md:col-span-6 md:min-h-24 min-h-20 items-center justify-center rounded-lg bg-white">
-              <div className="flex gap-3.5 pl-4 pt-4 md:hidden">
+              <div className="flex flex-wrap gap-3.5 pl-4 pt-4 md:hidden">
                 <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900  undefined">
                   <p> Aula A </p>
                 </div>
@@ -153,6 +153,7 @@ export default function AgendaPage() {
             />
             <Session
               tags={["Aula A"]}
+              extraTags={["Domòtica"]}              
               title="Introducció a Home Assistant"
               cols={2}
             />
@@ -164,12 +165,13 @@ export default function AgendaPage() {
             <Time time="11:00 ~ 11:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["python", "vue3"]}
+              extraTags={["Python", "Privadesa", "Sobirania", "GDPR", "Vue3"]}
               title="Crea formularis ètics amb LiberaForms"
-              speaker="Andrés "
+              speaker="Andrés (Evilham)"
             />
             <Session
               tags={["Aula A"]}
+              extraTags={["Domòtica"]}
               title="Introducció a Home Assistant"
               cols={2}
             />
@@ -190,13 +192,13 @@ export default function AgendaPage() {
             <Time time="12:00 ~ 12:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["IA", "python"]}
+              extraTags={["IA", "Python", "Django"]}
               title="PetitSuits"
               speaker="Laura Mora i Aubert"
             />
             <Session
               tags={["Aula A"]}
-              extraTags={["Godot"]}
+              extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
               cols={2}
@@ -207,10 +209,15 @@ export default function AgendaPage() {
           {/* 12:30 ~ 13:00 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="12:30 ~ 13:00" />
-            <Session tags={["Auditori"]} title="Intro a Rust" />
+            <Session 
+              tags={["Auditori"]} 
+              extraTags={["Rust", "Compiler", "Debug"]}
+              title="How the Rust compiler will assist you in catching bugs" 
+              speaker="Ivan Fraixedes Cugat"
+            />
             <Session
               tags={["Aula A"]}
-              extraTags={["Godot"]}
+              extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
               cols={2}
@@ -224,11 +231,10 @@ export default function AgendaPage() {
             <Time time="13:00 ~ 13:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["accessibilitat"]}
-
+              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
-              speaker="Juanjo"
+              speaker="Juanjo Montiel"
             />
             <Empty />
             <Empty />
@@ -239,10 +245,10 @@ export default function AgendaPage() {
             <Time time="13:30 ~ 14:00" />
             <Session
               tags={["Auditori"]}
-              extraTags={["accessibilitat"]}
+              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
-              speaker="Juanjo"
+              speaker="Juanjo Montiel"
             />
             <Empty />
             <Empty />
@@ -262,13 +268,14 @@ export default function AgendaPage() {
             <Time time="16:00 ~ 16:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["blockchain", "Airflow", "DBT", "Solana"]}
+              extraTags={["Blockchain", "Airflow", "DBT", "Solana"]}
               title="Glassnode Data Platform journey"
-              speaker="Planadecu"
+              speaker="Jordi P."
             />
             <Session
               tags={["Aula A"]}
-              title="How the Rust compiler will assist you in catching bugs"
+              extraTags={["Rust", "Exercicis", "Aprenentatge"]}
+              title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
@@ -284,13 +291,14 @@ export default function AgendaPage() {
             <Time time="16:30 ~ 17:00" />
             <Session 
               tags={["Auditori"]} 
-              extraTags={["Ruby on Rails", "monetitzar"]}
+              extraTags={["Ruby on Rails", "Monetitzar"]}
               title="Model de negoci amb Decidim" 
-              speaker="Oliver"
+              speaker="Oliver Valls"
               />
             <Session
               tags={["Aula A"]}
-              title="How the Rust compiler will assist you in catching bugs"
+              extraTags={["Rust", "Exercicis", "Aprenentatge"]}
+              title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
@@ -306,7 +314,7 @@ export default function AgendaPage() {
             <Time time="17:00 ~ 17:30" />
             <Session
               tags={["Auditori"]}
-              title="Taula rodona / Lightning Talks"
+              title="Lightning Talks"
             />
             <Empty />
             <Session

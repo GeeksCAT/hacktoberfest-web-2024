@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@remix-run/react";
 
 export default function AboutEvent() {
   const eventThings = [
@@ -42,7 +43,17 @@ export default function AboutEvent() {
 
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             Gaudirem junts d'una jornada amb moltes activitats: xerrades, tallers per a tots els nivells i perfils, 
-            lightning talks, marató de PRS i molt més!
+            lightning talks, marató de PRS i molt més! 
+          </p>
+
+          <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
+            Per més informació&nbsp;
+            <Link
+              to="/agenda"
+              className="font-semibold text-emerald-600 hover:text-emerald-900"
+            >
+              consulta l'agenda detallada
+            </Link>
           </p>
         </div>
 
