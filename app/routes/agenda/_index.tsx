@@ -153,6 +153,7 @@ export default function AgendaPage() {
             />
             <Session
               tags={["Aula A"]}
+              extraTags={["Domòtica"]}              
               title="Introducció a Home Assistant"
               cols={2}
             />
@@ -164,12 +165,13 @@ export default function AgendaPage() {
             <Time time="11:00 ~ 11:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["python", "vue3"]}
+              extraTags={["Python", "Privadesa", "Sobirania", "GDPR", "Vue3"]}
               title="Crea formularis ètics amb LiberaForms"
               speaker="Andrés "
             />
             <Session
               tags={["Aula A"]}
+              extraTags={["Domòtica"]}
               title="Introducció a Home Assistant"
               cols={2}
             />
@@ -190,13 +192,13 @@ export default function AgendaPage() {
             <Time time="12:00 ~ 12:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["IA", "python"]}
+              extraTags={["IA", "Python", "Django"]}
               title="PetitSuits"
               speaker="Laura Mora i Aubert"
             />
             <Session
               tags={["Aula A"]}
-              extraTags={["Godot"]}
+              extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
               cols={2}
@@ -210,7 +212,7 @@ export default function AgendaPage() {
             <Session tags={["Auditori"]} title="Intro a Rust" />
             <Session
               tags={["Aula A"]}
-              extraTags={["Godot"]}
+              extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
               cols={2}
@@ -224,8 +226,7 @@ export default function AgendaPage() {
             <Time time="13:00 ~ 13:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["accessibilitat"]}
-
+              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
               speaker="Juanjo"
@@ -239,7 +240,7 @@ export default function AgendaPage() {
             <Time time="13:30 ~ 14:00" />
             <Session
               tags={["Auditori"]}
-              extraTags={["accessibilitat"]}
+              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
               speaker="Juanjo"
@@ -262,13 +263,14 @@ export default function AgendaPage() {
             <Time time="16:00 ~ 16:30" />
             <Session
               tags={["Auditori"]}
-              extraTags={["blockchain", "Airflow", "DBT", "Solana"]}
+              extraTags={["Blockchain", "Airflow", "DBT", "Solana"]}
               title="Glassnode Data Platform journey"
-              speaker="Planadecu"
+              speaker="Jordi P."
             />
             <Session
               tags={["Aula A"]}
-              title="How the Rust compiler will assist you in catching bugs"
+              extraTags={["Rust", "Exercicis", "Aprenentatge"]}
+              title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
@@ -284,13 +286,14 @@ export default function AgendaPage() {
             <Time time="16:30 ~ 17:00" />
             <Session 
               tags={["Auditori"]} 
-              extraTags={["Ruby on Rails", "monetitzar"]}
+              extraTags={["Ruby on Rails", "Monetitzar"]}
               title="Model de negoci amb Decidim" 
-              speaker="Oliver"
+              speaker="Oliver Valls"
               />
             <Session
               tags={["Aula A"]}
-              title="How the Rust compiler will assist you in catching bugs"
+              extraTags={["Rust", "Exercicis", "Aprenentatge"]}
+              title="Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
@@ -306,7 +309,7 @@ export default function AgendaPage() {
             <Time time="17:00 ~ 17:30" />
             <Session
               tags={["Auditori"]}
-              title="Taula rodona / Lightning Talks"
+              title="Lightning Talks"
             />
             <Empty />
             <Session
