@@ -209,7 +209,12 @@ export default function AgendaPage() {
           {/* 12:30 ~ 13:00 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="12:30 ~ 13:00" />
-            <Session tags={["Auditori"]} title="Intro a Rust" />
+            <Session 
+              tags={["Auditori"]} 
+              extraTags={["Rust", "Compiler", "Debug"]}
+              title="How the Rust compiler will assist you in catching bugs" 
+              speaker="Ivan Fraixedes Cugat"
+            />
             <Session
               tags={["Aula A"]}
               extraTags={["Jocs", "Godot"]}
