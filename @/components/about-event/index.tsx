@@ -47,10 +47,10 @@ export default function AboutEvent() {
           </p>
 
           <p className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
-            Per més informació
+            Per més informació&nbsp;
             <Link
               to="/agenda"
-              className="text-sm font-semibold text-emerald-600 hover:text-emerald-900"
+              className="font-semibold text-emerald-600 hover:text-emerald-900"
             >
               consulta l'agenda detallada
             </Link>
