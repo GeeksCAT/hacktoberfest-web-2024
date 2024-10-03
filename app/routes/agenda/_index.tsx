@@ -234,7 +234,7 @@ export default function AgendaPage() {
               extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
-              speaker="Juanjo"
+              speaker="Juanjo Montiel"
             />
             <Empty />
             <Empty />
@@ -248,7 +248,7 @@ export default function AgendaPage() {
               extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
-              speaker="Juanjo"
+              speaker="Juanjo Montiel"
             />
             <Empty />
             <Empty />
