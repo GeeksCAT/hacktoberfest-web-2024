@@ -1,0 +1,31 @@
+---
+title: PetitSuis
+duracio: Llarga
+tags: ["python", "django", "asgi", "IA", "scripting"]
+who: Addictes a la informàtica
+background: Coneixements en desenvolupament web
+sala: Auditori
+---
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<div class="flex gap-3.5 pt-4 flex-wrap">
+    <div class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#65E0B8] p-1 text-xs text-neutral-900 ">
+        <p>{frontmatter.sala}</p>
+    </div>
+    {
+        frontmatter.tags.map((tag, index) => (
+            <div key={index} class="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
+                <p>{tag}</p>
+            </div>
+        ))
+    }
+</div>
+
+# {frontmatter.title}
+
+PetitSuis és una eina d'automatització de processos. El nom del programa ve de "navalla suïssa" i de "petits programes" i pretén ser una eina d'ús intern i per tenir a mà el codi per implementar a futurs programes. Actualment el programa té vàries funcionalitats, algunes d'elles utilitzen APIs de IA, d'altres APIs de tota la vida i d'altres utilitzen llibreries i programes per tractar textos, imatges, vídeos i àudios. PetitSuis està programat amb Django.

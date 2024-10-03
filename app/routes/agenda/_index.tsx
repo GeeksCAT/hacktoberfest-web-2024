@@ -159,12 +159,14 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="10:30 ~ 11:00" />
             <Session
+            to="/talk/que-es-un-internal-developer-platform"
               tags={["Auditori"]}
               extraTags={["Docker", "Kubernetes", "Git"]}
               title="Què és un internal Developer Platform?"
               speaker="Joel Pérez Morales"
             />
             <Session
+              to ="/talk/home-assistant"
               tags={["Aula A"]}
               extraTags={["Domòtica"]}              
               title="Introducció a Home Assistant"
@@ -177,12 +179,14 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="11:00 ~ 11:30" />
             <Session
+              to="/talk/crea-formularis-etics-amb-liberaforms"
               tags={["Auditori"]}
               extraTags={["Python", "Privadesa", "Sobirania", "GDPR", "Vue3"]}
               title="Crea formularis ètics amb LiberaForms"
               speaker="Andrés (Evilham)"
             />
             <Session
+              to ="/talk/home-assistant"
               tags={["Aula A"]}
               extraTags={["Domòtica"]}
               title="Introducció a Home Assistant"
@@ -204,6 +208,7 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="12:00 ~ 12:30" />
             <Session
+              to="/talk/petitsuits"
               tags={["Auditori"]}
               extraTags={["IA", "Python", "Django"]}
               title="PetitSuits"
@@ -224,6 +229,7 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="12:30 ~ 13:00" />
             <Session 
+              to="/talk/how-the-rust-compiler-will-assist-you-in-catching-bugs"
               tags={["Auditori"]} 
               extraTags={["Rust", "Compiler", "Debug"]}
               title="How the Rust compiler will assist you in catching bugs" 
@@ -245,6 +251,7 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="13:00 ~ 13:30" />
             <Session
+              to="/talk/reactnative-con-accesibilidad-desde-el-inicio-para-que-nadie-se-quede-sin-tocar-tu-app"
               tags={["Auditori"]}
               extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
@@ -259,6 +266,7 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="13:30 ~ 14:00" />
             <Session
+              to="/talk/reactnative-con-accesibilidad-desde-el-inicio-para-que-nadie-se-quede-sin-tocar-tu-app"
               tags={["Auditori"]}
               extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
