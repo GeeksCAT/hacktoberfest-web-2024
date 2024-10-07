@@ -1,0 +1,28 @@
+---
+title: Introducció al motor de jocs Godot
+duracio: Llarga, una horeta ( perquè m'enrotllo una mica :-D )
+tags: [Jocs, Godot]
+who: Qualsevol públic
+background: No es requereixen coneixements previs
+sala: Aula A
+speaker: Ivan Reyné Ferrando
+website: https://irigames.com/
+x: https://x.com/irigames2009
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+Donarem a conèixer com funciona i com fer servir el motor de jocs Godot. Explicarem des de com està organitzada la interfície fins a la manera com es recomana estructurar escenes, objectes i codi. La intenció és que al acabar els assistents tinguin els coneixements i la confiança per començar a remenar Godot ells mateixos
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website} />

@@ -1,0 +1,27 @@
+---
+title: Rust hacking hour
+duracio: Curta
+tags: [Rust, Exercicis, Aprenentatge]
+who: 
+background: 
+sala: Aula A
+speaker: Ivan Fraixedes Cugat
+x: https://x.com/ifraixedes
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+Resoldrem plegats exercicis bàsics de Rust seguint alguns rustlings. Ens adaptarem al públic assistent, potser es fan grups per nivells o directament seguim tots plegats els mateixos exercicis. Taller obert a qualsevol persona amb coneixements bàsics de programació, tant si mai has emprat Rust com si ja tens una mica d’experiència. I si ets experimentat i vols ajudar-nos a potenciar Rust, benvingut seràs!
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} />

@@ -1,0 +1,27 @@
+---
+title: Introducció a Home Assistant
+duracio: 60 minuts
+tags: [Domòtica]
+who: qualsevol públic
+background: no es requereixen coneixements previs
+sala: Aula A
+speaker: Joan Domènech
+x: https://x.com/joandomenech
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+Petita introducció a què és i orígens de Home Assistant i part pràctica de fer automatitzacions
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} />

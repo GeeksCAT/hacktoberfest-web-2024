@@ -1,0 +1,28 @@
+---
+title: PetitSuis, una petita navalla suïssa
+duracio: Llarga
+tags: ["IA", "Python", "Django"]
+who: Addictes a la informàtica
+background: Coneixements en desenvolupament web
+sala: Auditori
+speaker: Laura Mora i Aubert
+x: https://x.com/@blackhold_
+website: https://blackhold.nusepas.com/
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+Amb l'aparició de les intel·ligències artificials, l'automatització de processos assoleix nous horitzons. Aquest programa, d'ús intern i desenvolupat amb Django, està concebut per localitzar les limitacions, reptes i fortaleses dels diferents models d'IA existents, tan els propietaris com els opensource
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} />

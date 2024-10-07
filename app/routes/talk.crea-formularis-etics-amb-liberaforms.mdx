@@ -1,0 +1,26 @@
+---
+title: Crea formularis ètics amb LiberaForms
+duracio: Curta
+tags: [Python, Privadesa, Sobirania, GDPR, Vue3]
+who: qualsevol públic
+background: Cap
+sala: Auditori
+speaker: Andrés aka Evilham
+website: https://evilham.com
+---
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+Presentem una eina de "kilòmetre zero", pensada i desenvolupada com a infraestructura comunitària, lliure i ètica que permet crear i gestionar formularis que respecten els drets digitals de les persones que en fan ús.
+
+<Speaker name={frontmatter.speaker} website={frontmatter.website} />

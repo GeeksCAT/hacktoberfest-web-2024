@@ -1,0 +1,28 @@
+---
+title: Què és un Internal Developer Platform?
+duracio: Curta
+tags: [Docker, Kubernetes, Git]
+who: Estudiants informàtics i professionals
+background: Coneixements bàsics de programació i/o sistemes informàtics
+sala: Auditori
+speaker: Joel Pérez Morales
+website: https://www.linkedin.com/in/joelpmorales/
+---
+
+import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
+
+export const meta = () => {
+  return [
+    { title: frontmatter.title }
+  ];
+};
+
+<Tags tags={frontmatter.tags} sala={frontmatter.sala} />
+
+# {frontmatter.title}
+
+En els últims anys la cultura DevOps s'ha popularitzat a moltes empreses, però, és realment per tothom? En aquesta xerrada aprendrem sobre una nova disciplina que proposa una solució real i concreta per . Parlarem de com podem combinar tecnologies aparentment diferenciades com Git o Kubernetes per permetre que els desenvolupadors puguin desplegar fàcilment les seves aplicacions complint tots els estàndards de la companyia
+
+
+<Speaker name={frontmatter.speaker} website={frontmatter.website} />
