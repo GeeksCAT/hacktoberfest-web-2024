@@ -346,7 +346,7 @@ export default function AgendaPage() {
             <Empty />
             <Session
               tags={["Aula B"]}
-              title="Taller per infants: Activitat desendollada"
+              title="Taller Tecnològic: Crea el teu videojoc Arcade amb Micro:bit"
               cols={2}
             />
             <MaratoPrs />
