@@ -7,6 +7,7 @@ background: Coneixements de programació
 sala: Auditori
 speaker: Ivan Fraixedes Cugat
 x: https://x.com/ifraixedes
+website: https://www.linkedin.com/in/ifraixedes
 ---
 
 import Tags from '../../@/components/tags/index.tsx';
@@ -27,4 +28,4 @@ In this presentation, we’ll start with a brief introduction to Rust’s core f
 We’ll then explore how the Rust compiler, through its various mechanisms—such as its strict type system, ownership model, and the borrow checker—helps prevent common programming errors.
 By analyzing practical code examples, we’ll demonstrate how these features work together to catch bugs, prevent undefined behavior, and ensure memory safety, making Rust a reliable choice for building safe and efficient software.
 
-<Speaker name={frontmatter.speaker} x={frontmatter.x} />
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website} />
