@@ -1,13 +1,15 @@
 ---
-title: Glassnode Data Platform journey
+title: Blockchain Data Platform Journey @ Glassnode
 duracio: Curta
 tags: [Blockchain, Airflow, DBT, Solana]
 who: 
 background: 
 sala: Auditori
 speaker: Jordi Planadecu
+website: https://www.linkedin.com/in/planadecu
 ---
 import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -19,4 +21,6 @@ export const meta = () => {
 
 # {frontmatter.title}
 
-Per confirmar
+L’objectiu d’aquesta xerrada és mostrar com l’arquitectura de Glassnode ha evolucionat per gestionar aquests volums massius de dades. Vam començar amb una arquitectura de microserveis i hem evolucionat cap a una Medallion Architecture amb un Lakehouse, processant dades amb DBT i Spark, orquestrant amb Airflow i treballant amb dos núvols
+
+<Speaker name={frontmatter.speaker} website={frontmatter.website} />

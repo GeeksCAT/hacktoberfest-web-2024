@@ -5,9 +5,13 @@ tags: [Accessibilitat, React-Native, Aplicacions inclusives]
 who: qualsevol públic
 background: Per entendre l'accessibilitat en React Native, recomanaria tenir cert nivell en aquesta matèria, però com que ensenyaré altres coses com el maneig de l'app amb lector de pantalla, tampoc és imprescindible. Crec que tothom pot emportar-se alguna cosa d'aquesta xerrada.
 sala: Auditori
+speaker: Juanjo Montiel
+x: https://x.com/kastwey
+website: https://www.linkedin.com/in/jjmontiel/
 ---
 
 import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -26,3 +30,5 @@ En aquesta xerrada veurem com amb poc esforç podem fer que la nostra aplicació
 Quan acabi aquesta xerrada, hauràs après com crear apps que no deixin ningú de banda... I si això no et convenç, no et preocupis, també parlarem de lleis, multes, subvencions i SEO. Que, ara ja et va picant més la curiositat?
 
 Ah! També us ensenyaré a utilitzar el mòbil amb la pantalla apagada! Adéu als tafaners que miren la vostra pantalla per sobre de la vostra espatlla des del seient del darrere de l'autobús! Un imprescindible, vaja! ;)
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website}/>

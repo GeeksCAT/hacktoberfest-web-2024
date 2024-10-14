@@ -162,7 +162,7 @@ export default function AgendaPage() {
             to="/talk/que-es-un-internal-developer-platform"
               tags={["Auditori"]}
               extraTags={["Docker", "Kubernetes", "Git"]}
-              title="Què és un internal Developer Platform?"
+              title="From DevOps to Platform Engineering"
               speaker="Joel Pérez Morales"
             />
             <Session

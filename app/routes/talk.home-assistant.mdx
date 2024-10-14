@@ -7,6 +7,7 @@ background: no es requereixen coneixements previs
 sala: Aula A
 speaker: Joan Domènech
 x: https://x.com/joandomenech
+website: https://github.com/joandomenech
 ---
 
 import Tags from '../../@/components/tags/index.tsx';
@@ -24,4 +25,4 @@ export const meta = () => {
 
 Petita introducció a què és i orígens de Home Assistant i part pràctica de fer automatitzacions
 
-<Speaker name={frontmatter.speaker} x={frontmatter.x} />
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website} />

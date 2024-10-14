@@ -1,14 +1,17 @@
 ---
-title: Model de negoci amb Decidim
+title: Model de negoci al voltant de Decidim
 duracio: Curta
 tags: [Ruby on Rails, Monetitzar]
-who: 
+who:
 background: 
 sala: Auditori
 speaker: Oliver Valls
+x: https://x.com/olivervalls
+website: https://www.linkedin.com/in/olivervalls
 ---
 
 import Tags from '../../@/components/tags/index.tsx';
+import Speaker from '../../@/components/speaker/index.tsx';
 
 export const meta = () => {
   return [
@@ -21,4 +24,12 @@ export const meta = () => {
 
 # {frontmatter.title}
 
-Per confirmar
+1. mini presentació de CodiT per posar en context
+2. presentar Decidim
+- què es? plataforma participació
+- llicència OpenSource que té
+- expansió mundial
+3. Tipus de serveis que prestem i modes de facturació
+4. espai de QAs
+
+<Speaker name={frontmatter.speaker} x={frontmatter.x} website={frontmatter.website} />
