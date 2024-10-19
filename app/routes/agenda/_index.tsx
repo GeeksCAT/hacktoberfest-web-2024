@@ -16,7 +16,7 @@ const MaratoPrs = () => (
   <div className="md:flex md:flex-col md:col-span-2 md:min-h-24 min-h-20 items-center justify-center rounded-lg bg-white">
     <div className="flex gap-3.5 pl-4 pt-4 md:hidden">
       <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-        <p>Aula d'informatica</p>
+        <p>Aula 5</p>
       </div>
     </div>
     <div className="px-4 pb-4">
@@ -39,14 +39,22 @@ const Time = ({ time }: { time: string }) => (
   </div>
 );
 
-const SessionLink = ({ to, children }: { to?: string; children: React.ReactNode }) => {
+const SessionLink = ({
+  to,
+  children,
+}: {
+  to?: string;
+  children: React.ReactNode;
+}) => {
   if (to) {
-    return <Link to={to} className="cursor-pointer hover:underline">
-      {children}
-    </Link>;
+    return (
+      <Link to={to} className="cursor-pointer hover:underline">
+        {children}
+      </Link>
+    );
   }
   return <>{children}</>;
-}
+};
 const Session = ({
   to,
   tags,
@@ -108,22 +116,22 @@ export default function AgendaPage() {
             <div className="md:flex md:min-h-24 md:rounded-lg"></div>
             <div className="hidden md:col-span-3 md:flex md:flex-col md:items-center md:rounded-lg bg-[#65E0B8] md:min-h-24 md:justify-center">
               <div className="text-wrap text-base text-neutral-800 md:px-2 md:text-2xl">
-                Auditori
+                Aula 4
               </div>
             </div>
             <div className="hidden md:col-span-2 md:flex md:flex-col md:items-center md:rounded-lg bg-[#65E0B8] md:min-h-24 md:justify-center">
               <div className="text-wrap text-base text-neutral-800 md:px-2 md:text-2xl">
-                Aula A
+                Aula 6
               </div>
             </div>
             <div className="hidden md:col-span-2 md:flex md:flex-col md:items-center md:rounded-lg bg-[#65E0B8] md:min-h-24 md:justify-center">
               <div className="text-wrap text-base text-neutral-800 md:px-2 md:text-2xl">
-                Aula B
+                Aula 7
               </div>
             </div>
             <div className="hidden md:col-span-2 md:flex md:flex-col md:items-center md:rounded-lg bg-[#65E0B8] md:min-h-24 md:justify-center">
               <div className="text-wrap text-base text-neutral-800 md:px-2 md:text-2xl">
-                Aula d'informàtica
+                Aula 5
               </div>
             </div>
           </div>
@@ -139,17 +147,17 @@ export default function AgendaPage() {
           {/* 10:00 ~ 10:30 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="10:00 ~ 10:30" />
-            <Session tags={["Auditori"]} title="Benvinguda + Què és l'OS" />
+            <Session tags={["Aula 4"]} title="Benvinguda + Què és l'OS" />
             <div className="md:flex md:flex-col md:col-span-6 md:min-h-24 min-h-20 items-center justify-center rounded-lg bg-white">
               <div className="flex flex-wrap gap-3.5 pl-4 pt-4 md:hidden">
                 <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                  <p> Aula A </p>
+                  <p> Aula 6 </p>
                 </div>
                 <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                  <p> Aula B </p>
+                  <p> Aula 7 </p>
                 </div>
                 <div className="flex h-auto min-w-[88px] items-center justify-center rounded-lg bg-[#FFE999] p-1 text-xs text-neutral-900">
-                  <p> Aula d'informatica </p>
+                  <p> Aula 6 </p>
                 </div>
               </div>
               <div className="md:p-0 pb-4 pl-4 pt-2 text-neutral-950">-</div>
@@ -159,16 +167,16 @@ export default function AgendaPage() {
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="10:30 ~ 11:00" />
             <Session
-            to="/talk/que-es-un-internal-developer-platform"
-              tags={["Auditori"]}
+              to="/talk/que-es-un-internal-developer-platform"
+              tags={["Aula 4"]}
               extraTags={["Docker", "Kubernetes", "Git"]}
               title="From DevOps to Platform Engineering"
               speaker="Joel Pérez Morales"
             />
             <Session
-              to ="/talk/home-assistant"
-              tags={["Aula A"]}
-              extraTags={["Domòtica"]}              
+              to="/talk/home-assistant"
+              tags={["Aula 6"]}
+              extraTags={["Domòtica"]}
               title="Introducció a Home Assistant"
               cols={2}
             />
@@ -180,14 +188,14 @@ export default function AgendaPage() {
             <Time time="11:00 ~ 11:30" />
             <Session
               to="/talk/crea-formularis-etics-amb-liberaforms"
-              tags={["Auditori"]}
+              tags={["Aula 4"]}
               extraTags={["Python", "Privadesa", "Sobirania", "GDPR", "Vue3"]}
               title="Crea formularis ètics amb LiberaForms"
               speaker="Andrés (Evilham)"
             />
             <Session
-              to ="/talk/home-assistant"
-              tags={["Aula A"]}
+              to="/talk/home-assistant"
+              tags={["Aula 6"]}
               extraTags={["Domòtica"]}
               title="Introducció a Home Assistant"
               cols={2}
@@ -209,14 +217,14 @@ export default function AgendaPage() {
             <Time time="12:00 ~ 12:30" />
             <Session
               to="/talk/petitsuits"
-              tags={["Auditori"]}
+              tags={["Aula 4"]}
               extraTags={["IA", "Python", "Django"]}
               title="PetitSuits"
               speaker="Laura Mora i Aubert"
             />
             <Session
               to="/talk/introduccio-al-motor-de-jocs-godot"
-              tags={["Aula A"]}
+              tags={["Aula 6"]}
               extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
@@ -228,16 +236,16 @@ export default function AgendaPage() {
           {/* 12:30 ~ 13:00 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="12:30 ~ 13:00" />
-            <Session 
+            <Session
               to="/talk/how-the-rust-compiler-will-assist-you-in-catching-bugs"
-              tags={["Auditori"]} 
+              tags={["Aula 4"]}
               extraTags={["Rust", "Compiler", "Debug"]}
-              title="How the Rust compiler will assist you in catching bugs" 
+              title="How the Rust compiler will assist you in catching bugs"
               speaker="Ivan Fraixedes Cugat"
             />
             <Session
               to="/talk/introduccio-al-motor-de-jocs-godot"
-              tags={["Aula A"]}
+              tags={["Aula 6"]}
               extraTags={["Jocs", "Godot"]}
               title="Introducció al motor de jocs Godot"
               speaker="Ivan Reyne Ferrando"
@@ -252,8 +260,12 @@ export default function AgendaPage() {
             <Time time="13:00 ~ 13:30" />
             <Session
               to="/talk/reactnative-con-accesibilidad-desde-el-inicio-para-que-nadie-se-quede-sin-tocar-tu-app"
-              tags={["Auditori"]}
-              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
+              tags={["Aula 4"]}
+              extraTags={[
+                "Accessibilitat",
+                "React-Native",
+                "Aplicacions inclusives",
+              ]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
               speaker="Juanjo Montiel"
@@ -267,8 +279,12 @@ export default function AgendaPage() {
             <Time time="13:30 ~ 14:00" />
             <Session
               to="/talk/reactnative-con-accesibilidad-desde-el-inicio-para-que-nadie-se-quede-sin-tocar-tu-app"
-              tags={["Auditori"]}
-              extraTags={["Accessibilitat", "React-Native", "Aplicacions inclusives"]}
+              tags={["Aula 4"]}
+              extraTags={[
+                "Accessibilitat",
+                "React-Native",
+                "Aplicacions inclusives",
+              ]}
               title="ReactNative con Accesibilidad desde el inicio: ¡Para que
                     nadie se quede sin tocar tu app!"
               speaker="Juanjo Montiel"
@@ -291,21 +307,21 @@ export default function AgendaPage() {
             <Time time="16:00 ~ 16:30" />
             <Session
               to="/talk/glassnode-data-platform-journey"
-              tags={["Auditori"]}
+              tags={["Aula 4"]}
               extraTags={["Blockchain", "Airflow", "DBT", "Solana"]}
               title="Glassnode Data Platform journey"
               speaker="Jordi P."
             />
             <Session
               to="/talk/rust-hacking-hour"
-              tags={["Aula A"]}
+              tags={["Aula 6"]}
               extraTags={["Rust", "Exercicis", "Aprenentatge"]}
               title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
             <Session
-              tags={["Aula B"]}
+              tags={["Aula 7"]}
               title="Taller Tecnològic: Crea el teu videojoc Arcade amb Micro:bit"
               cols={2}
             />
@@ -314,23 +330,23 @@ export default function AgendaPage() {
           {/* 16:30 ~ 17:00 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="16:30 ~ 17:00" />
-            <Session 
+            <Session
               to="/talk/model-de-negoci-amb-decidim"
-              tags={["Auditori"]} 
+              tags={["Aula 4"]}
               extraTags={["Ruby on Rails", "Monetitzar"]}
-              title="Model de negoci amb Decidim" 
+              title="Model de negoci amb Decidim"
               speaker="Oliver Valls"
-              />
+            />
             <Session
               to="/talk/rust-hacking-hour"
-              tags={["Aula A"]}
+              tags={["Aula 6"]}
               extraTags={["Rust", "Exercicis", "Aprenentatge"]}
               title="Taller: Rust hacking hour"
               speaker="Ivan Fraixedes Cugat"
               cols={2}
             />
             <Session
-              tags={["Aula B"]}
+              tags={["Aula 7"]}
               title="Taller Tecnològic: Crea el teu videojoc Arcade amb Micro:bit"
               cols={2}
             />
@@ -339,13 +355,10 @@ export default function AgendaPage() {
           {/* 17:00 ~ 17:30 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="17:00 ~ 17:30" />
-            <Session
-              tags={["Auditori"]}
-              title="Lightning Talks"
-            />
+            <Session tags={["Aula 4"]} title="Lightning Talks" />
             <Empty />
             <Session
-              tags={["Aula B"]}
+              tags={["Aula 7"]}
               title="Taller Tecnològic: Crea el teu videojoc Arcade amb Micro:bit"
               cols={2}
             />
@@ -355,7 +368,7 @@ export default function AgendaPage() {
           {/* 17:30 ~ 18:00 */}
           <div className="grid size-full grid-flow-row gap-4 md:grid-cols-10">
             <Time time="17:30 ~ 18:00" />
-            <Session tags={["Auditori"]} title="Cloenda" />
+            <Session tags={["Aula 4"]} title="Cloenda" />
             <Empty />
             <Empty />
             <Empty />
